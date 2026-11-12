@@ -6,7 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Akıllı Şehir Savunması: 3D Taktik Komuta Oyunu</title>
+    <title>Akıllı Şehir Savunması: Full HD 3D Taktik Komuta Oyunu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,7 +17,7 @@
             height: 100%;
             height: 100dvh;
             font-family: 'Inter', sans-serif;
-            background-color: #070b14;
+            background-color: #050912;
             color: #e2e8f0;
             overflow: hidden;
             user-select: none;
@@ -44,12 +44,12 @@
             border-radius: 3px;
         }
         .telemetry-card {
-            background: rgba(15, 23, 42, 0.88);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(51, 65, 85, 0.75);
+            background: rgba(10, 16, 30, 0.88);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.25);
         }
         .unit-btn-active {
-            box-shadow: 0 0 18px rgba(56, 189, 248, 0.28);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
         }
         @media (max-width: 950px) and (orientation: landscape) {
             body {
@@ -69,7 +69,7 @@
                 height: 100% !important;
             }
             aside {
-                width: 310px !important;
+                width: 315px !important;
                 height: 100% !important;
                 border-top: 0 !important;
                 border-left: 1px solid #1e293b !important;
@@ -86,7 +86,7 @@
         </div>
         <h2 class="text-xl font-extrabold text-white mb-2">LÜTFEN CİHAZINIZI YATAY ÇEVİRİN</h2>
         <p class="text-xs text-slate-300 max-w-xs leading-relaxed">
-            Şehir Savunma Komutanlığı 3D haritası adres çubuğu gizli <span class="text-cyan-400 font-bold">Tam Ekran Yatay (Landscape)</span> modda oynanmak üzere tasarlanmıştır.
+            Şehir Savunma Komutanlığı Full HD 3D haritası adres çubuğu gizli <span class="text-cyan-400 font-bold">Tam Ekran Yatay (Landscape)</span> modda oynanmak üzere tasarlanmıştır.
         </p>
         <div class="flex gap-2 mt-5">
             <button id="btn-force-fullscreen-rotate" class="px-4 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold shadow-lg">
@@ -104,7 +104,7 @@
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-800 pb-3">
                 <div>
                     <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-cyan-500/15 border border-cyan-500/40 text-cyan-300 font-mono-tech text-[10px] font-bold mb-1">
-                        3D TAKTİK KOMUTA & KALE SAVUNMA
+                        FULL HD 3D • 30 HARİTA • KARA, HAVA & PİYADE HAREKATI
                     </div>
                     <h2 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight">ŞEHİR SAVUNMA KOMUTANLIĞI</h2>
                 </div>
@@ -125,21 +125,21 @@
             </div>
 
             <div id="nickname-saved-banner" class="hidden text-[11px] font-mono-tech text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 rounded-xl px-3 py-1.5 text-center">
-                ✓ Kullanıcı adınız tarayıcıya kaydedildi! Artık her girişte otomatik tanınacaksınız.
+                ✓ Kullanıcı adınız tarayıcıya kaydedildi!
             </div>
 
             <!-- Mod Seçim Ekranı -->
             <div id="menu-mode-select" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                 <div class="bg-slate-950/90 border border-emerald-500/40 rounded-2xl p-4 flex flex-col justify-between space-y-3">
                     <div>
-                        <div class="text-emerald-400 font-mono-tech text-xs font-bold mb-1">TEK OYUNCULU SENARYO</div>
-                        <h3 class="text-base font-bold text-white mb-1">3D Kale Savunması & Boss</h3>
+                        <div class="text-emerald-400 font-mono-tech text-xs font-bold mb-1">TEK OYUNCULU SEFER (30 HARİTA)</div>
+                        <h3 class="text-base font-bold text-white mb-1">3D Kale Savunması & Hava Taarruzu</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Karayolundan saldıran zırhlı birliklere ve GOLIATH-X Boss'a karşı kaleni savun. Tüm birimleri Sv.5 yapıp Hava Savunma Kulesi kur!
+                            Düşman tankları, savaş uçakları ve piyadelere karşı 30 haritada savaş! Tüm birimler <span class="text-purple-300 font-bold">Sv.3</span> olunca Hava Savunma Kalesi, <span class="text-amber-300 font-bold">Sv.5</span> olunca Yola Kara Mevzisi açılır!
                         </p>
                     </div>
                     <button id="btn-start-single" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg transition">
-                        TEK OYUNCULU BAŞLAT (TAM EKRAN)
+                        TEK OYUNCULU BAŞLAT (FULL HD)
                     </button>
                 </div>
 
@@ -151,7 +151,7 @@
                         </div>
                         <h3 class="text-base font-bold text-white mb-1">Gerçek Online 3 Kişilik Oda</h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                            Oda kur veya açık odalara katıl. Tüm oyuncular hazır dediğinde oda sahibi maçı başlatır!
+                            Oda kur veya açık odalara katıl. Vurduğun her hedef için puan kazan ve savunma kuleleri kur!
                         </p>
                     </div>
                     <div class="space-y-2">
@@ -228,29 +228,28 @@
                 </svg>
             </div>
             <h1 class="text-xs sm:text-sm font-extrabold tracking-wide text-slate-100 flex items-center gap-1.5 flex-wrap">
-                <span class="hidden sm:inline">ŞEHİR SAVUNMA KOMUTANLIĞI</span>
                 <span id="map-badge" class="px-2 py-0.5 rounded text-[10px] font-mono-tech bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
-                    BÖLÜM 1: METROPOL
+                    HARİTA 1/30: METROPOL
                 </span>
                 <span id="wave-badge" class="px-2 py-0.5 rounded text-[10px] font-mono-tech bg-rose-500/20 text-rose-400 border border-rose-500/40">
-                    DALGA 1
+                    DALGA 1 / 5
                 </span>
             </h1>
         </div>
 
-        <!-- Oyuncu Kaynakları, Üs Sağlığı, Tam Ekran & Oyunu Bitir -->
+        <!-- Oyuncu Kaynakları, Üs Sağlığı, Tam Ekran & Çıkış -->
         <div class="flex items-center gap-1.5 sm:gap-2 font-mono-tech text-xs">
             <div class="bg-slate-950/90 px-2 py-1 rounded-xl border border-slate-700 flex items-center gap-1.5">
                 <span class="text-slate-400 hidden md:inline">KALE:</span>
                 <div class="w-14 sm:w-24 h-2 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
                     <div id="hq-hp-bar" class="h-full bg-emerald-500 transition-all duration-300" style="width: 100%"></div>
                 </div>
-                <span id="hq-hp-text" class="text-emerald-400 font-bold text-[11px]">1200</span>
+                <span id="hq-hp-text" class="text-emerald-400 font-bold text-[11px]">1500</span>
             </div>
 
             <div class="bg-amber-500/10 px-2 py-1 rounded-xl border border-amber-500/40 flex items-center gap-1">
                 <span class="text-amber-400 font-bold">★</span>
-                <span id="score-display" class="text-amber-300 font-extrabold text-[11px]">250</span>
+                <span id="score-display" class="text-amber-300 font-extrabold text-[11px]">350</span>
             </div>
 
             <div class="hidden md:flex bg-slate-800/80 px-2 py-1 rounded-xl border border-slate-700 items-center gap-1">
@@ -258,7 +257,7 @@
                 <span id="kills-display" class="text-rose-400 font-bold">0</span>
             </div>
 
-            <button id="btn-hud-fullscreen" title="Tam Ekran (Adres Çubuğunu Gizle)" class="bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded-xl border border-slate-600 text-cyan-300 font-bold text-[11px] transition">
+            <button id="btn-hud-fullscreen" title="Tam Ekran" class="bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded-xl border border-slate-600 text-cyan-300 font-bold text-[11px] transition">
                 ⛶
             </button>
 
@@ -275,40 +274,43 @@
     <!-- Ana Oyun Alanı -->
     <main class="flex-1 flex flex-col lg:flex-row overflow-hidden">
 
-        <!-- Genişletilmiş 3B Savaş Haritası -->
-        <div class="relative flex-1 min-h-[260px] lg:min-h-0 bg-[#080d18] overflow-hidden" id="canvas-container">
+        <!-- Genişletilmiş Full HD 3B Savaş Haritası -->
+        <div class="relative flex-1 min-h-[260px] lg:min-h-0 bg-[#050912] overflow-hidden" id="canvas-container">
             <canvas id="simCanvas"></canvas>
 
             <!-- Sol Üst Taktik Bilgi -->
             <div class="absolute top-2.5 left-2.5 pointer-events-none flex flex-wrap items-center gap-2">
                 <div class="telemetry-card px-2 py-0.5 rounded-lg text-[10px] font-mono-tech flex items-center gap-1.5">
-                    <span class="text-slate-400">KONUM:</span>
+                    <span class="text-slate-400">KOORDİNAT:</span>
                     <span id="hud-coords" class="text-cyan-400 font-semibold">0000, 0000</span>
                 </div>
-                <div id="enemy-alert-banner" class="hidden telemetry-card px-2.5 py-0.5 rounded-lg text-[10px] font-mono-tech border-rose-500/70 bg-rose-950/80 text-rose-300 animate-pulse">
-                    ⚠️ DÜŞMAN ZIRHLI BİRLİĞİ ŞEHİR SINIRINI GEÇTİ!
+                <div id="build-mode-banner" class="hidden telemetry-card px-2.5 py-0.5 rounded-lg text-[10px] font-mono-tech border-purple-400/80 bg-purple-950/90 text-purple-200 animate-pulse">
+                    🏰 KURULUM MODU AKTİF: HARİTADA İSTEDİĞİNİZ NOKTAYA TIKLAYIN!
+                </div>
+                <div id="enemy-alert-banner" class="hidden telemetry-card px-2.5 py-0.5 rounded-lg text-[10px] font-mono-tech border-rose-500/70 bg-rose-950/85 text-rose-300 animate-pulse">
+                    ⚠️ DÜŞMAN ZIRHLI BİRLİĞİ, UÇAKLAR VE PİYADE ASKERLERİ SALDIRIYOR!
                 </div>
             </div>
 
             <!-- Boss Can Barı -->
             <div id="boss-hud" class="hidden absolute top-11 left-1/2 -translate-x-1/2 w-[90%] max-w-lg telemetry-card border-2 border-rose-600/80 bg-slate-950/90 p-2 rounded-xl shadow-2xl z-20">
                 <div class="flex items-center justify-between text-xs font-mono-tech mb-1">
-                    <span class="text-rose-400 font-extrabold tracking-wider flex items-center gap-1.5">
-                        ☠️ BOSS: GOLIATH-X SÜPER AĞIR ZIRHLI
+                    <span id="boss-title-text" class="text-rose-400 font-extrabold tracking-wider flex items-center gap-1.5">
+                        ☠️ BOSS: GOLIATH-X MK-1
                     </span>
-                    <span id="boss-hp-text" class="text-amber-300 font-bold">7500 / 7500</span>
+                    <span id="boss-hp-text" class="text-amber-300 font-bold">5500 / 5500</span>
                 </div>
                 <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-rose-500/40">
                     <div id="boss-hp-bar" class="h-full bg-gradient-to-r from-rose-600 via-red-500 to-amber-500 transition-all duration-150" style="width: 100%"></div>
                 </div>
             </div>
 
-            <!-- Bölüm Geçiş Bildirimi -->
-            <div id="stage-clear-banner" class="hidden absolute inset-0 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center z-25 pointer-events-none">
+            <!-- Bölüm Geçiş Bildirimi (30 Harita İlerlemesi) -->
+            <div id="stage-clear-banner" class="hidden absolute inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center z-25 pointer-events-none">
                 <div class="bg-slate-900/95 border-2 border-emerald-500 rounded-2xl px-8 py-6 text-center shadow-2xl">
-                    <div class="text-emerald-400 font-mono-tech text-xs font-bold tracking-widest mb-1">BÖLÜM 1 TAMAMLANDI!</div>
-                    <h3 class="text-2xl font-extrabold text-white mb-2">YENİ HARİTAYA GEÇİLİYOR</h3>
-                    <p class="text-sm text-cyan-300 font-mono-tech">BÖLÜM 2: GÜNEY SINIR ÇÖL ÜSSÜ (+500 BONUS PUAN)</p>
+                    <div id="stage-clear-sub" class="text-emerald-400 font-mono-tech text-xs font-bold tracking-widest mb-1">HARİTA 1 TAMAMLANDI!</div>
+                    <h3 id="stage-clear-title" class="text-2xl font-extrabold text-white mb-2">YENİ BÖLGEYE GEÇİLİYOR</h3>
+                    <p id="stage-clear-desc" class="text-sm text-cyan-300 font-mono-tech">HARİTA 2/30 (+600 BONUS PUAN)</p>
                 </div>
             </div>
 
@@ -320,8 +322,8 @@
                     <p id="game-over-desc" class="text-sm text-slate-300">Savunma hattı aşıldı ve kale karargahı imha edildi.</p>
                     <div class="grid grid-cols-2 gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono-tech text-xs">
                         <div>
-                            <div class="text-slate-500">ULAŞILAN DALGA</div>
-                            <div id="final-wave" class="text-base font-bold text-amber-400 mt-0.5">1</div>
+                            <div class="text-slate-500">ULAŞILAN HARİTA</div>
+                            <div id="final-wave" class="text-base font-bold text-amber-400 mt-0.5">Harita 1</div>
                         </div>
                         <div>
                             <div class="text-slate-500">İMHA EDİLEN HEDEF</div>
@@ -335,16 +337,17 @@
             </div>
         </div>
 
-        <!-- Sağ Komuta, Birim Seçimi & Donanım Yükseltme Paneli -->
-        <aside class="w-full lg:w-[400px] bg-slate-900 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col h-auto lg:h-full overflow-y-auto">
+        <!-- Sağ Komuta, Birim Seçimi & Simgeli Donanım Yükseltme Paneli -->
+        <aside class="w-full lg:w-[405px] bg-slate-900 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col h-auto lg:h-full overflow-y-auto">
 
-            <!-- 1. Saldırı Birimi Seçimi -->
+            <!-- 1. Saldırı & Savunma İnşa Birimi Seçimi -->
             <div class="p-2.5 sm:p-3 border-b border-slate-800 space-y-2">
                 <div class="flex items-center justify-between">
-                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-slate-400">1. Taarruz Birimi Seç (Tıkla & Vur)</h2>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-slate-400">1. Taarruz & Mevzi Seç (Haritaya Tıkla)</h2>
                     <span id="player-role-badge" class="text-[10px] font-mono-tech text-cyan-400">KOMUTAN</span>
                 </div>
 
+                <!-- 3 Ana Taarruz Birimi -->
                 <div class="grid grid-cols-3 gap-1.5">
                     <button id="select-drone" class="unit-btn-active p-1.5 sm:p-2 rounded-xl border-2 border-sky-500 bg-sky-500/15 text-left transition flex flex-col justify-between">
                         <div class="flex items-center justify-between w-full">
@@ -385,18 +388,28 @@
                     </button>
                 </div>
 
-                <!-- Sv.5 Kilidi: Hava Savunma Kulesi İnşa Butonu -->
-                <button id="select-aa-tower" disabled class="w-full py-1.5 px-2.5 rounded-xl border border-slate-700 bg-slate-950/90 disabled:opacity-60 text-left transition flex items-center justify-between">
-                    <div>
-                        <div class="text-[11px] font-bold text-purple-300 flex items-center gap-1 flex-wrap">
-                            <span>🗼 HAVA SAVUNMA KULESİ</span>
-                            <span id="aa-unlock-badge" class="text-[9px] font-mono-tech px-1 py-0.5 rounded bg-slate-800 text-slate-400">TÜMÜ Sv.5</span>
+                <!-- Sv.3 Hava Savunma Kalesi & Sv.5 Yola Kurulan Kara Mevzisi İnşa Butonları -->
+                <div class="grid grid-cols-2 gap-1.5">
+                    <button id="select-aa-tower" disabled class="p-2 rounded-xl border border-slate-700 bg-slate-950/90 disabled:opacity-55 text-left transition flex flex-col justify-between">
+                        <div class="flex items-center justify-between w-full">
+                            <span class="text-[11px] font-bold text-purple-300">🏰 HAVA SAVUNMA KALESİ</span>
                         </div>
-                    </div>
-                    <span class="px-2 py-0.5 rounded-lg bg-purple-600/30 border border-purple-500/50 text-purple-200 font-mono-tech text-[11px] font-bold">
-                        ★ 300
-                    </span>
-                </button>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span id="aa-unlock-badge" class="text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">TÜMÜ Sv.3</span>
+                            <span class="text-[10px] font-mono-tech font-bold text-purple-300">★ 300</span>
+                        </div>
+                    </button>
+
+                    <button id="select-ground-bunker" disabled class="p-2 rounded-xl border border-slate-700 bg-slate-950/90 disabled:opacity-55 text-left transition flex flex-col justify-between">
+                        <div class="flex items-center justify-between w-full">
+                            <span class="text-[11px] font-bold text-orange-300">🛡️ KARA MEVZİSİ (YOL)</span>
+                        </div>
+                        <div class="flex items-center justify-between w-full mt-1">
+                            <span id="bunker-unlock-badge" class="text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">TÜMÜ Sv.5</span>
+                            <span class="text-[10px] font-mono-tech font-bold text-orange-300">★ 400</span>
+                        </div>
+                    </button>
+                </div>
 
                 <button id="btn-auto-engage" class="w-full py-1.5 px-3 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs shadow-lg transition flex items-center justify-center gap-1.5">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -406,59 +419,74 @@
                 </button>
             </div>
 
-            <!-- 2. Donanım Güncelleme & Ar-Ge Laboratuvarı -->
-            <div class="p-2.5 sm:p-3 border-b border-slate-800 space-y-1.5">
+            <!-- 2. Simgeli Donanım & Güç Yükseltme Kartları (Max Sv.10) -->
+            <div class="p-2.5 sm:p-3 border-b border-slate-800 space-y-2">
                 <div class="flex items-center justify-between">
-                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-amber-400">2. Donanım & Güç Yükseltmeleri (Max Sv.5)</h2>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-amber-400">2. Donanım & Güç Yükseltmeleri (Max Sv.10)</h2>
                 </div>
 
-                <div class="space-y-1.5">
-                    <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
-                        <div>
-                            <div class="text-xs font-bold text-sky-300 flex items-center gap-1">
-                                <span>TB-X Lazer</span>
-                                <span id="upg-drone-stats" class="text-[10px] font-mono-tech text-slate-400">(Hasar: 95)</span>
-                            </div>
-                            <div class="text-[10px] text-slate-400">Lazer atış gücü & hızı</div>
+                <div class="grid grid-cols-2 gap-2">
+                    <!-- TB-X SİHA Kartı -->
+                    <div class="bg-slate-950/90 p-2 rounded-xl border border-sky-500/30 flex flex-col items-center text-center justify-between gap-1.5">
+                        <div class="w-9 h-9 rounded-xl bg-sky-500/15 border border-sky-500/40 flex items-center justify-center text-sky-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
                         </div>
-                        <button id="btn-upg-drone" class="px-2.5 py-1 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-xs font-bold transition shrink-0">
-                            ★ 150
+                        <div>
+                            <div class="text-[11px] font-bold text-sky-300">TB-X Lazer</div>
+                            <div id="upg-drone-stats" class="text-[9px] font-mono-tech text-slate-400">Sv.1 • Hasar: 95</div>
+                        </div>
+                        <button id="btn-upg-drone" class="w-full py-1 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-[11px] font-bold transition">
+                            ▲ ★ 150
                         </button>
                     </div>
 
-                    <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
-                        <div>
-                            <div class="text-xs font-bold text-amber-300 flex items-center gap-1">
-                                <span>F-X Hipersonik</span>
-                                <span id="upg-jet-stats" class="text-[10px] font-mono-tech text-slate-400">(Hasar: 185)</span>
-                            </div>
-                            <div class="text-[10px] text-slate-400">Füze alan hasarı & çapı</div>
+                    <!-- F-X JET Kartı -->
+                    <div class="bg-slate-950/90 p-2 rounded-xl border border-amber-500/30 flex flex-col items-center text-center justify-between gap-1.5">
+                        <div class="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
                         </div>
-                        <button id="btn-upg-jet" class="px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-xs font-bold transition shrink-0">
-                            ★ 200
+                        <div>
+                            <div class="text-[11px] font-bold text-amber-300">F-X Hipersonik</div>
+                            <div id="upg-jet-stats" class="text-[9px] font-mono-tech text-slate-400">Sv.1 • Hasar: 185</div>
+                        </div>
+                        <button id="btn-upg-jet" class="w-full py-1 rounded-lg bg-amber-600 hover:bg-amber-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-[11px] font-bold transition">
+                            ▲ ★ 200
                         </button>
                     </div>
 
-                    <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
-                        <div>
-                            <div class="text-xs font-bold text-emerald-300 flex items-center gap-1">
-                                <span>ALTAY-X Zırh & Top</span>
-                                <span id="upg-tank-stats" class="text-[10px] font-mono-tech text-slate-400">(Hasar: 85)</span>
-                            </div>
-                            <div class="text-[10px] text-slate-400">Kara & uçaksavar topçu gücü</div>
+                    <!-- ALTAY-X TANK Kartı -->
+                    <div class="bg-slate-950/90 p-2 rounded-xl border border-emerald-500/30 flex flex-col items-center text-center justify-between gap-1.5">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
                         </div>
-                        <button id="btn-upg-tank" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-xs font-bold transition shrink-0">
-                            ★ 150
+                        <div>
+                            <div class="text-[11px] font-bold text-emerald-300">ALTAY-X Zırh</div>
+                            <div id="upg-tank-stats" class="text-[9px] font-mono-tech text-slate-400">Sv.1 • Hasar: 85</div>
+                        </div>
+                        <button id="btn-upg-tank" class="w-full py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-[11px] font-bold transition">
+                            ▲ ★ 150
                         </button>
                     </div>
 
-                    <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
-                        <div>
-                            <div class="text-xs font-bold text-cyan-300">Kale Sur Onarımı</div>
-                            <div class="text-[10px] text-slate-400">Kaleye +350 dayanıklılık</div>
+                    <!-- Kale Sur Onarımı Kartı -->
+                    <div class="bg-slate-950/90 p-2 rounded-xl border border-cyan-500/30 flex flex-col items-center text-center justify-between gap-1.5">
+                        <div class="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
                         </div>
-                        <button id="btn-repair-hq" class="px-2.5 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-xs font-bold transition shrink-0">
-                            ★ 100
+                        <div>
+                            <div class="text-[11px] font-bold text-cyan-300">Kale Onarımı</div>
+                            <div class="text-[9px] font-mono-tech text-slate-400">+400 Sur Gücü</div>
+                        </div>
+                        <button id="btn-repair-hq" class="w-full py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-mono-tech text-[11px] font-bold transition">
+                            ✚ ★ 100
                         </button>
                     </div>
                 </div>
@@ -525,7 +553,7 @@
             document.getElementById('mobile-rotate-overlay').classList.add('hidden');
         });
 
-        // ==================== KALICI KULLANICI ADI KAYDI (LOCALSTORAGE) ====================
+        // ==================== KALICI KULLANICI ADI KAYDI ====================
         const NICKNAME_STORAGE_KEY = 'scd3d_saved_commander_name_v1';
         const nicknameInput = document.getElementById('player-nickname-input');
 
@@ -555,9 +583,9 @@
 
             SoundFX.playUpgrade();
             const banner = document.getElementById('nickname-saved-banner');
-            banner.textContent = `✓ "${cleanName}" tarayıcıya kaydedildi! Artık her girişte otomatik tanınacaksınız.`;
+            banner.textContent = `✓ "${cleanName}" tarayıcıya kaydedildi!`;
             banner.classList.remove('hidden');
-            setTimeout(() => banner.classList.add('hidden'), 3200);
+            setTimeout(() => banner.classList.add('hidden'), 2800);
         }
 
         document.getElementById('btn-save-nickname').addEventListener('click', saveCommanderNickname);
@@ -635,6 +663,23 @@
                 osc.start(now);
                 osc.stop(now + 0.2);
             },
+            playRifle() {
+                if (!this.enabled) return;
+                this.init();
+                if (!this.ctx) return;
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(520, now);
+                osc.frequency.exponentialRampToValueAtTime(120, now + 0.08);
+                gain.gain.setValueAtTime(0.06, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start(now);
+                osc.stop(now + 0.08);
+            },
             playExplosion(intensity = 1) {
                 if (!this.enabled) return;
                 this.init();
@@ -711,14 +756,27 @@
         };
         document.getElementById('btn-toggle-sound').addEventListener('click', () => SoundFX.toggle());
 
-        // ==================== KARAYOLU AĞI & HARİTA TANIMLARI ====================
-        const WORLD_W = 1600;
-        const WORLD_H = 1050;
-        let scaleX = 1, scaleY = 1;
+        // ==================== GENİŞLETİLMİŞ FULL HD DÜNYA & 30 HARİTA TANIMLARI ====================
+        const WORLD_W = 1920;
+        const WORLD_H = 1220;
+        let scaleX = 1, scaleY = 1, dpr = 1;
 
-        const ROAD_W = 54;
-        const V_ROADS = [510, 820, 1140, 1460];
-        const H_ROADS = [180, 520, 860];
+        const ROAD_W = 58;
+        const V_ROADS = [540, 920, 1320, 1740];
+        const H_ROADS = [200, 610, 1020];
+
+        const MAP_THEMES = [
+            { name: 'METROPOL MERKEZİ', ground: '#0a1322', road: '#182438', grass: '#064e3b', water: '#0284c7', wall: '#1e293b', roof: '#334155' },
+            { name: 'KIZIL ÇÖL ÜSSÜ', ground: '#21150c', road: '#2d1f14', grass: '#3f6212', water: '#0369a1', wall: '#451a03', roof: '#78350f' },
+            { name: 'KUZEY BUZUL KALESİ', ground: '#0c1a2b', road: '#1e293b', grass: '#0f766e', water: '#38bdf8', wall: '#1e3a8a', roof: '#3b82f6' },
+            { name: 'ZÜMRÜT ORMAN VADİSİ', ground: '#071b14', road: '#1c2621', grass: '#15803d', water: '#06b6d4', wall: '#14532d', roof: '#166534' },
+            { name: 'VOLKANİK SANAYİ BÖLGESİ', ground: '#1a0c0e', road: '#27171a', grass: '#4d7c0f', water: '#0ea5e9', wall: '#3f151b', roof: '#7f1d1d' },
+            { name: 'GÜNEY LİMAN ŞEHRİ', ground: '#091624', road: '#172536', grass: '#047857', water: '#0284c7', wall: '#1e293b', roof: '#475569' }
+        ];
+
+        function getMapTheme(mapIndex) {
+            return MAP_THEMES[(mapIndex - 1) % MAP_THEMES.length];
+        }
 
         const PLAYER_COLORS = [
             { primary: '#38bdf8', dark: '#0369a1', hull: '#0c4a6e', name: 'MAVİ KOMUTANLIK' },
@@ -727,83 +785,81 @@
         ];
 
         const MULTI_CASTLE_SLOTS = [
-            { x: 60,   y: 620, w: 220, h: 240, tankSpawn: { x: 510,  y: 740 }, droneHome: { x: 105,  y: 130 }, jetHome: { x: 115,  y: 290 } },
-            { x: 1330, y: 240, w: 220, h: 240, tankSpawn: { x: 1460, y: 360 }, droneHome: { x: 1410, y: 110 }, jetHome: { x: 1410, y: 580 } },
-            { x: 860,  y: 620, w: 220, h: 240, tankSpawn: { x: 820,  y: 740 }, droneHome: { x: 960,  y: 570 }, jetHome: { x: 960,  y: 920 } }
+            { x: 60,   y: 720,  w: 230, h: 250, tankSpawn: { x: 540,  y: 840 },  droneHome: { x: 105,  y: 135 }, jetHome: { x: 115,  y: 300 } },
+            { x: 1620, y: 270,  w: 230, h: 250, tankSpawn: { x: 1740, y: 390 },  droneHome: { x: 1700, y: 110 }, jetHome: { x: 1700, y: 650 } },
+            { x: 980,  y: 720,  w: 230, h: 250, tankSpawn: { x: 920,  y: 840 },  droneHome: { x: 1080, y: 650 }, jetHome: { x: 1080, y: 1080 } }
         ];
 
         const airbase = {
-            x: 20, y: 20, w: 455, h: 1010,
-            runway: { x: 320, y: 65, w: 125, h: 920 },
-            hangarDrone: { x: 40, y: 75, w: 135, h: 110, doorOpen: 0, targetDoor: 0, label: 'HANGAR-01 (SİHA)' },
-            hangarJet:   { x: 40, y: 230, w: 150, h: 125, doorOpen: 0, targetDoor: 0, label: 'HANGAR-02 (F-X JET)' },
-            motorPool:   { x: 40, y: 400, w: 150, h: 95, label: 'ZIRHLI GARJ (ALTAY-X)' },
-            hqBuilding:  { x: 55, y: 620, w: 235, h: 250, label: 'ANA SAVUNMA KALESİ' }
+            x: 20, y: 20, w: 470, h: 1180,
+            runway: { x: 330, y: 65, w: 130, h: 1090 },
+            hangarDrone: { x: 40, y: 80, w: 140, h: 115, doorOpen: 0, targetDoor: 0, label: 'HANGAR-01 (SİHA)' },
+            hangarJet:   { x: 40, y: 240, w: 155, h: 130, doorOpen: 0, targetDoor: 0, label: 'HANGAR-02 (F-X JET)' },
+            motorPool:   { x: 40, y: 420, w: 155, h: 100, label: 'ZIRHLI GARJ (ALTAY-X)' },
+            hqBuilding:  { x: 55, y: 720, w: 245, h: 265, label: 'ANA SAVUNMA KALESİ' }
         };
-
-        const districts = [
-            { name: 'KUZEY TEKNOLOJİ PARKI', x: 545, y: 25, w: 560, h: 290, border: 'rgba(56, 189, 248, 0.25)' },
-            { name: 'DOĞU SANAYİ BÖLGESİ', x: 1175, y: 25, w: 400, h: 480, border: 'rgba(245, 158, 11, 0.25)' },
-            { name: 'MERKEZ FİNANS MEYDANI', x: 545, y: 355, w: 560, h: 330, border: 'rgba(16, 185, 129, 0.25)' },
-            { name: 'GÜNEY ENERJİ SEKTÖRÜ', x: 545, y: 725, w: 1030, h: 300, border: 'rgba(168, 85, 247, 0.25)' }
-        ];
 
         let gameState = {
             mode: 'SINGLE',
-            stage: 1,
-            score: 250,
+            mapNumber: 1,
+            maxMaps: 30,
+            score: 350,
             kills: 0,
             wave: 1,
-            hqHp: 1200,
-            hqMaxHp: 1200,
+            hqHp: 1500,
+            hqMaxHp: 1500,
             isGameOver: false,
             waveTimer: 0,
             enemiesToSpawn: 3,
             spawnCooldown: 1.5,
-            bossSpawnedInStage: false
+            bossSpawnedInMap: false
         };
 
         let selectedUnitType = 'DRONE';
 
         const upgrades = {
             DRONE: { level: 1, cost: 150, damage: 95, speedMult: 1.0 },
-            JET:   { level: 1, cost: 200, damage: 185, blastRadius: 80 },
-            TANK:  { level: 1, cost: 150, damage: 85, maxHp: 400, speedMult: 1.0 }
+            JET:   { level: 1, cost: 200, damage: 185, blastRadius: 85 },
+            TANK:  { level: 1, cost: 150, damage: 85, maxHp: 420, speedMult: 1.0 }
         };
 
         let buildings = [];
+        let parks = [];
         let craters = [];
         let particles = [];
         let floatingTexts = [];
-        let cars = [];
         let enemyTanks = [];
+        let enemyJets = [];
+        let enemyInfantry = [];
         let friendlyShells = [];
         let enemyShells = [];
+        let rifleBullets = [];
         let antiAirShells = [];
-        let aaTowers = [];
+        let aaCastles = [];
+        let groundBunkers = [];
 
         const units = {
             DRONE: {
-                x: airbase.hangarDrone.x + 68, y: airbase.hangarDrone.y + 55,
-                homeX: airbase.hangarDrone.x + 68, homeY: airbase.hangarDrone.y + 55,
+                x: airbase.hangarDrone.x + 70, y: airbase.hangarDrone.y + 58,
+                homeX: airbase.hangarDrone.x + 70, homeY: airbase.hangarDrone.y + 58,
                 angle: 0, altitude: 0, state: 'IDLE',
                 targetEnemy: null, targetRemotePlayer: null,
                 attackTimer: 0, laserActive: false,
                 ammo: 3, maxAmmo: 3, hitsTaken: 0, respawnTimer: 0
             },
             JET: {
-                x: airbase.hangarJet.x + 75, y: airbase.hangarJet.y + 62,
-                homeX: airbase.hangarJet.x + 75, homeY: airbase.hangarJet.y + 62,
+                x: airbase.hangarJet.x + 78, y: airbase.hangarJet.y + 65,
+                homeX: airbase.hangarJet.x + 78, homeY: airbase.hangarJet.y + 65,
                 angle: 0, altitude: 0, state: 'IDLE',
                 waypoints: [], waypointIndex: 0,
                 targetEnemy: null, targetRemotePlayer: null, targetPos: null,
                 attackTimer: 0, missiles: [], hitsTaken: 0, respawnTimer: 0
             },
             TANK: {
-                x: 510, y: 520,
+                x: 540, y: 610,
                 angle: 0, turretAngle: 0,
-                hp: 400, maxHp: 400, alive: true, respawnTimer: 0,
-                targetPos: { x: 510, y: 520 },
+                hp: 420, maxHp: 420, alive: true, respawnTimer: 0,
+                targetPos: { x: 540, y: 610 },
                 waypoints: [],
                 targetEnemy: null, targetRemotePlayer: null, targetCastlePlayer: null,
                 reloadTimer: 0, aaCooldown: 0
@@ -827,7 +883,6 @@
             isReady: false,
             started: false,
             players: {},
-            remoteCastlesHp: { 0: 1500, 1: 1500, 2: 1500 },
             syncInterval: null,
             directoryInterval: null,
             lastAttackEventId: ''
@@ -973,7 +1028,7 @@
         async function refreshOpenRoomsDirectory() {
             if (mpLobby.active || gameState.mode === 'MULTI') return;
             const roomsObj = await fbGet('rooms');
-            setConnBadge(roomsObj !== null || true);
+            setConnBadge(true);
             renderOpenRoomsList(roomsObj);
         }
 
@@ -1042,7 +1097,6 @@
                 if (!mpLobby.active || !mpLobby.roomCode) return;
                 const roomPath = `rooms/${mpLobby.roomCode}`;
 
-                // Kendi canlılık ve birim verimizi güncelle
                 const myUpdate = {
                     id: LOCAL_CLIENT_ID,
                     name: mpLobby.myName,
@@ -1051,6 +1105,8 @@
                     ready: mpLobby.isReady,
                     lastSeen: Date.now(),
                     hqHp: Math.round(gameState.hqHp),
+                    aaCastles: aaCastles.map(c => ({ x: Math.round(c.x), y: Math.round(c.y), angle: Number(c.angle.toFixed(2)) })),
+                    groundBunkers: groundBunkers.map(b => ({ x: Math.round(b.x), y: Math.round(b.y), angle: Number(b.angle.toFixed(2)), hp: Math.round(b.hp) })),
                     tank: {
                         x: Math.round(units.TANK.x),
                         y: Math.round(units.TANK.y),
@@ -1084,7 +1140,6 @@
                 const roomData = await fbGet(roomPath);
                 if (!roomData) return;
 
-                // Süresi dolmuş (15 sn yanıt vermeyen) oyuncuları temizle
                 const now = Date.now();
                 const validPlayers = {};
                 if (roomData.players) {
@@ -1096,7 +1151,6 @@
                 }
                 mpLobby.players = validPlayers;
 
-                // Hasar olaylarını kontrol et
                 if (roomData.lastHit && roomData.lastHit.id !== mpLobby.lastAttackEventId) {
                     mpLobby.lastAttackEventId = roomData.lastHit.id;
                     if (roomData.lastHit.targetId === LOCAL_CLIENT_ID) {
@@ -1138,6 +1192,12 @@
                                 units.JET.x = units.JET.homeX;
                                 units.JET.y = units.JET.homeY;
                                 units.JET.respawnTimer = 480;
+                            }
+                        } else if (roomData.lastHit.targetType === 'BUNKER' && groundBunkers.length > 0) {
+                            const bnk = groundBunkers.find(b => b.hp > 0);
+                            if (bnk) {
+                                bnk.hp -= roomData.lastHit.damage;
+                                createExplosion(bnk.x, bnk.y, 0.7);
                             }
                         }
                     }
@@ -1328,33 +1388,30 @@
         function launchMultiplayerBattle() {
             mpLobby.started = true;
             gameState.mode = 'MULTI';
-            gameState.score = 350;
+            gameState.mapNumber = 1;
+            gameState.score = 450;
             gameState.kills = 0;
-            gameState.hqHp = 1500;
-            gameState.hqMaxHp = 1500;
+            gameState.hqHp = 1800;
+            gameState.hqMaxHp = 1800;
             gameState.isGameOver = false;
-            enemyTanks = [];
-            aaTowers = [];
+            resetUnitsAndUpgrades();
+            initCityEnvironment(1);
 
             const slotCfg = MULTI_CASTLE_SLOTS[mpLobby.mySlot] || MULTI_CASTLE_SLOTS[0];
             units.TANK.x = slotCfg.tankSpawn.x;
             units.TANK.y = slotCfg.tankSpawn.y;
             units.TANK.targetPos = { x: slotCfg.tankSpawn.x, y: slotCfg.tankSpawn.y };
             units.TANK.waypoints = [];
-            units.TANK.alive = true;
-            units.TANK.hp = units.TANK.maxHp;
 
             units.DRONE.homeX = slotCfg.droneHome.x;
             units.DRONE.homeY = slotCfg.droneHome.y;
             units.DRONE.x = slotCfg.droneHome.x;
             units.DRONE.y = slotCfg.droneHome.y;
-            units.DRONE.state = 'IDLE';
 
             units.JET.homeX = slotCfg.jetHome.x;
             units.JET.homeY = slotCfg.jetHome.y;
             units.JET.x = slotCfg.jetHome.x;
             units.JET.y = slotCfg.jetHome.y;
-            units.JET.state = 'IDLE';
 
             document.getElementById('map-badge').textContent = `ONLINE ODA: ${mpLobby.roomCode}`;
             document.getElementById('wave-badge').textContent = `3 KİŞİLİK ARENA`;
@@ -1373,21 +1430,24 @@
 
             gameState = {
                 mode: 'SINGLE',
-                stage: 1,
-                score: 250,
+                mapNumber: 1,
+                maxMaps: 30,
+                score: 350,
                 kills: 0,
                 wave: 1,
-                hqHp: 1200,
-                hqMaxHp: 1200,
+                hqHp: 1500,
+                hqMaxHp: 1500,
                 isGameOver: false,
                 waveTimer: 0,
                 enemiesToSpawn: 3,
                 spawnCooldown: 1.5,
-                bossSpawnedInStage: false
+                bossSpawnedInMap: false
             };
             resetUnitsAndUpgrades();
-            document.getElementById('map-badge').textContent = 'BÖLÜM 1: METROPOL';
-            document.getElementById('wave-badge').textContent = 'DALGA 1';
+            initCityEnvironment(1);
+            const theme = getMapTheme(1);
+            document.getElementById('map-badge').textContent = `HARİTA 1/30: ${theme.name}`;
+            document.getElementById('wave-badge').textContent = 'DALGA 1 / 5';
             document.getElementById('start-menu-overlay').classList.add('hidden');
             requestImmersiveFullscreenAndLandscape();
             updateUI();
@@ -1419,37 +1479,41 @@
 
         function resetUnitsAndUpgrades() {
             upgrades.DRONE = { level: 1, cost: 150, damage: 95, speedMult: 1.0 };
-            upgrades.JET   = { level: 1, cost: 200, damage: 185, blastRadius: 80 };
-            upgrades.TANK  = { level: 1, cost: 150, damage: 85, maxHp: 400, speedMult: 1.0 };
+            upgrades.JET   = { level: 1, cost: 200, damage: 185, blastRadius: 85 };
+            upgrades.TANK  = { level: 1, cost: 150, damage: 85, maxHp: 420, speedMult: 1.0 };
             enemyTanks = [];
+            enemyJets = [];
+            enemyInfantry = [];
             friendlyShells = [];
             enemyShells = [];
+            rifleBullets = [];
             antiAirShells = [];
             craters = [];
-            aaTowers = [];
+            aaCastles = [];
+            groundBunkers = [];
 
-            units.DRONE.homeX = airbase.hangarDrone.x + 68;
-            units.DRONE.homeY = airbase.hangarDrone.y + 55;
+            units.DRONE.homeX = airbase.hangarDrone.x + 70;
+            units.DRONE.homeY = airbase.hangarDrone.y + 58;
             units.DRONE.x = units.DRONE.homeX;
             units.DRONE.y = units.DRONE.homeY;
             units.DRONE.state = 'IDLE';
             units.DRONE.ammo = 3;
             units.DRONE.hitsTaken = 0;
 
-            units.JET.homeX = airbase.hangarJet.x + 75;
-            units.JET.homeY = airbase.hangarJet.y + 62;
+            units.JET.homeX = airbase.hangarJet.x + 78;
+            units.JET.homeY = airbase.hangarJet.y + 65;
             units.JET.x = units.JET.homeX;
             units.JET.y = units.JET.homeY;
             units.JET.state = 'IDLE';
             units.JET.hitsTaken = 0;
 
-            units.TANK.x = 510;
-            units.TANK.y = 520;
-            units.TANK.targetPos = { x: 510, y: 520 };
+            units.TANK.x = 540;
+            units.TANK.y = 610;
+            units.TANK.targetPos = { x: 540, y: 610 };
             units.TANK.waypoints = [];
             units.TANK.alive = true;
-            units.TANK.hp = 400;
-            units.TANK.maxHp = 400;
+            units.TANK.hp = 420;
+            units.TANK.maxHp = 420;
         }
 
         // ==================== YOL BULMA (SADECE KARAYOLLARI ÜZERİNDEN) ====================
@@ -1471,7 +1535,7 @@
             if (minDx < minDy) {
                 return { x: bestX, y: Math.max(40, Math.min(WORLD_H - 40, py)) };
             } else {
-                return { x: Math.max(495, Math.min(WORLD_W - 40, px)), y: bestY };
+                return { x: Math.max(515, Math.min(WORLD_W - 40, px)), y: bestY };
             }
         }
 
@@ -1491,52 +1555,76 @@
             ];
         }
 
-        // ==================== ŞEHİR ORTAMI & YARDIMCILAR ====================
+        // ==================== GENİŞLETİLMİŞ PARK, BAHÇE, SÜS HAVUZU & BİNALAR ====================
         function spawnFloatingText(x, y, text, color) {
             floatingTexts.push({ x, y, text, color, life: 1.0, vy: -0.65 });
         }
 
-        function initCityEnvironment() {
+        function rewardOnlineHit(points, x, y) {
+            if (gameState.mode !== 'MULTI') return;
+            gameState.score += points;
+            gameState.kills++;
+            spawnFloatingText(x, y - 36, `+${points} PUAN`, '#fbbf24');
+            updateUI();
+        }
+
+        function initCityEnvironment(mapIndex = 1) {
+            const theme = getMapTheme(mapIndex);
             buildings = [];
+            parks = [];
+
             const xBlocks = [
-                { x1: 555, x2: 775 },
-                { x1: 865, x2: 1095 },
-                { x1: 1185, x2: 1415 }
+                { x1: 590, x2: 870 },
+                { x1: 970, x2: 1270 },
+                { x1: 1370, x2: 1690 }
             ];
             const yBlocks = [
-                { y1: 42, y2: 140 },
-                { y1: 220, y2: 480 },
-                { y1: 560, y2: 820 },
-                { y1: 900, y2: 1005 }
+                { y1: 42, y2: 155 },
+                { y1: 245, y2: 565 },
+                { y1: 655, y2: 975 },
+                { y1: 1065, y2: 1185 }
             ];
 
-            const themes = [
-                { wall: '#1e293b', roof: '#334155', win: '#38bdf8' },
-                { wall: '#172554', roof: '#1e3a8a', win: '#60a5fa' },
-                { wall: '#1f2937', roof: '#374151', win: '#fbbf24' },
-                { wall: '#18181b', roof: '#27272a', win: '#34d399' }
-            ];
-
-            xBlocks.forEach(xb => {
-                yBlocks.forEach(yb => {
+            xBlocks.forEach((xb, xi) => {
+                yBlocks.forEach((yb, yi) => {
                     const bw = xb.x2 - xb.x1;
                     const bh = yb.y2 - yb.y1;
-                    const cols = bw > 180 ? 2 : 1;
-                    const rows = bh > 180 ? 2 : 1;
-                    const cw = (bw - (cols - 1) * 14) / cols;
-                    const ch = (bh - (rows - 1) * 14) / rows;
+
+                    if ((xi === 1 && yi === 1) || (xi === 2 && yi === 2) || (xi === 0 && yi === 2)) {
+                        parks.push({
+                            x: xb.x1,
+                            y: yb.y1,
+                            w: bw,
+                            h: bh,
+                            hasFountain: true,
+                            fountainType: (xi + yi) % 2 === 0 ? 'ROUND' : 'RECT',
+                            trees: [
+                                { rx: 0.14, ry: 0.18, r: 16 },
+                                { rx: 0.86, ry: 0.20, r: 18 },
+                                { rx: 0.16, ry: 0.82, r: 17 },
+                                { rx: 0.84, ry: 0.80, r: 15 },
+                                { rx: 0.50, ry: 0.14, r: 14 },
+                                { rx: 0.50, ry: 0.86, r: 14 }
+                            ]
+                        });
+                        return;
+                    }
+
+                    const cols = bw > 220 ? 2 : 1;
+                    const rows = bh > 220 ? 2 : 1;
+                    const cw = (bw - (cols - 1) * 16) / cols;
+                    const ch = (bh - (rows - 1) * 16) / rows;
 
                     for (let c = 0; c < cols; c++) {
                         for (let r = 0; r < rows; r++) {
-                            const t = themes[(c + r + Math.floor(xb.x1)) % themes.length];
                             buildings.push({
-                                x: xb.x1 + c * (cw + 14),
-                                y: yb.y1 + r * (ch + 14),
+                                x: xb.x1 + c * (cw + 16),
+                                y: yb.y1 + r * (ch + 16),
                                 w: cw,
                                 h: ch,
-                                wall: t.wall,
-                                roof: t.roof,
-                                win: t.win,
+                                wall: theme.wall,
+                                roof: theme.roof,
+                                win: (c + r + mapIndex) % 2 === 0 ? '#38bdf8' : '#fbbf24',
                                 damaged: false
                             });
                         }
@@ -1545,62 +1633,106 @@
             });
         }
 
-        // ==================== DÜŞMAN DALGALARI & BOSS ====================
+        // ==================== DÜŞMAN TANK, SAVAŞ UÇAĞI, YAYA PİYADE & 30 HARİTALI BOSS ====================
         function spawnEnemyTank(isBoss = false) {
-            const entryY = isBoss ? 520 : H_ROADS[Math.floor(Math.random() * H_ROADS.length)];
-            const stageMult = gameState.stage === 2 ? 1.45 : 1.0;
-            const isHeavy = !isBoss && gameState.wave >= 2 && Math.random() < 0.38;
+            const entryY = isBoss ? 610 : H_ROADS[Math.floor(Math.random() * H_ROADS.length)];
+            const mapScale = Math.pow(1.22, gameState.mapNumber - 1);
+            const isHeavy = !isBoss && gameState.wave >= 2 && Math.random() < 0.42;
             const maxHp = isBoss
-                ? Math.round(7500 * stageMult)
-                : Math.round(((isHeavy ? 260 : 145) + (gameState.wave - 1) * 32) * stageMult);
+                ? Math.round(5500 * Math.pow(1.32, gameState.mapNumber - 1))
+                : Math.round(((isHeavy ? 280 : 155) + (gameState.wave - 1) * 35) * mapScale);
 
             enemyTanks.push({
                 id: Date.now() + Math.random(),
-                x: WORLD_W + (isBoss ? 55 : 28),
+                x: WORLD_W + (isBoss ? 65 : 30),
                 y: entryY,
                 angle: Math.PI,
                 turretAngle: Math.PI,
                 hp: maxHp,
                 maxHp: maxHp,
-                speed: isBoss ? 0.32 : (isHeavy ? 0.54 : 0.74),
+                speed: isBoss ? (0.34 + Math.min(0.25, gameState.mapNumber * 0.01)) : (isHeavy ? 0.56 : 0.78),
                 isHeavy,
                 isBoss,
-                reward: isBoss ? 950 : (isHeavy ? 120 : 75),
-                fireCooldown: isBoss ? 80 : (115 + Math.random() * 50),
-                aaCooldown: 75,
+                bossRank: gameState.mapNumber,
+                reward: isBoss ? (900 + gameState.mapNumber * 120) : (isHeavy ? 125 : 80),
+                fireCooldown: isBoss ? 72 : (110 + Math.random() * 45),
+                aaCooldown: 70,
                 turnState: 'ON_H_ROAD'
             });
 
             const banner = document.getElementById('enemy-alert-banner');
             banner.textContent = isBoss
-                ? '☠️ UYARI! GOLIATH-X SÜPER AĞIR BOSS TANKI BÖLGEYE GİRDİ!'
-                : '⚠️ DÜŞMAN ZIRHLI BİRLİĞİ KARAYOLUNDAN İLERLİYOR!';
+                ? `☠️ UYARI! HARİTA ${gameState.mapNumber} BOSSU: GOLIATH-X MK-${gameState.mapNumber} SALDIRIDA!`
+                : '⚠️ DÜŞMAN ZIRHLI BİRLİĞİ, UÇAKLAR VE PİYADE ASKERLERİ SALDIRIYOR!';
             banner.classList.remove('hidden');
             setTimeout(() => banner.classList.add('hidden'), isBoss ? 5000 : 2800);
         }
 
-        function transitionToNextMap() {
-            gameState.stage = 2;
-            gameState.wave = 1;
-            gameState.bossSpawnedInStage = false;
-            gameState.enemiesToSpawn = 4;
-            gameState.score += 500;
-            gameState.hqHp = Math.min(gameState.hqMaxHp, gameState.hqHp + 450);
-
-            document.getElementById('map-badge').textContent = 'BÖLÜM 2: ÇÖL İLERİ ÜSSÜ';
-            document.getElementById('wave-badge').textContent = 'DALGA 1';
-            craters = [];
-            buildings.forEach(b => {
-                b.damaged = false;
-                b.wall = '#451a03';
-                b.roof = '#78350f';
+        function spawnEnemyJet() {
+            const mapScale = Math.pow(1.2, gameState.mapNumber - 1);
+            const maxHp = Math.round((240 + gameState.wave * 30) * mapScale);
+            const startY = 140 + Math.random() * (WORLD_H - 280);
+            enemyJets.push({
+                id: Date.now() + Math.random(),
+                x: WORLD_W + 40,
+                y: startY,
+                angle: Math.PI,
+                hp: maxHp,
+                maxHp: maxHp,
+                speed: 3.1 + Math.min(1.8, gameState.mapNumber * 0.06),
+                fireCooldown: 90,
+                reward: 140 + gameState.mapNumber * 15,
+                phase: 'APPROACH'
             });
+        }
+
+        function spawnEnemyInfantrySquad(count = 4) {
+            const mapScale = Math.pow(1.16, gameState.mapNumber - 1);
+            const maxHp = Math.round((75 + gameState.wave * 15) * mapScale);
+            const baseRoadY = H_ROADS[Math.floor(Math.random() * H_ROADS.length)];
+
+            for (let s = 0; s < count; s++) {
+                enemyInfantry.push({
+                    id: Date.now() + Math.random() + s,
+                    x: WORLD_W + 25 + (s % 2) * 26,
+                    y: baseRoadY + (s - count / 2) * 16,
+                    angle: Math.PI,
+                    hp: maxHp,
+                    maxHp: maxHp,
+                    speed: 0.92 + Math.random() * 0.22,
+                    fireCooldown: 38 + Math.floor(Math.random() * 25),
+                    walkPhase: Math.random() * Math.PI * 2,
+                    reward: 35 + gameState.mapNumber * 5
+                });
+            }
+        }
+
+        function transitionToNextMap() {
+            if (gameState.mapNumber < gameState.maxMaps) {
+                gameState.mapNumber++;
+            }
+            gameState.wave = 1;
+            gameState.bossSpawnedInMap = false;
+            gameState.enemiesToSpawn = 3 + Math.min(6, Math.floor(gameState.mapNumber / 3));
+            const bonus = 500 + gameState.mapNumber * 50;
+            gameState.score += bonus;
+            gameState.hqHp = Math.min(gameState.hqMaxHp, gameState.hqHp + 500);
+
+            const theme = getMapTheme(gameState.mapNumber);
+            document.getElementById('map-badge').textContent = `HARİTA ${gameState.mapNumber}/30: ${theme.name}`;
+            document.getElementById('wave-badge').textContent = 'DALGA 1 / 5';
+
+            craters = [];
+            initCityEnvironment(gameState.mapNumber);
 
             const banner = document.getElementById('stage-clear-banner');
+            document.getElementById('stage-clear-sub').textContent = `HARİTA ${gameState.mapNumber - 1} BOSSU İMHA EDİLDİ!`;
+            document.getElementById('stage-clear-title').textContent = `HARİTA ${gameState.mapNumber}/30: ${theme.name}`;
+            document.getElementById('stage-clear-desc').textContent = `YENİ HAREKAT ALANINA GEÇİLDİ (+${bonus} BONUS PUAN)`;
             banner.classList.remove('hidden');
             SoundFX.playUpgrade();
             updateUI();
-            setTimeout(() => banner.classList.add('hidden'), 3200);
+            setTimeout(() => banner.classList.add('hidden'), 3400);
         }
 
         function updateEnemyWaves(dt) {
@@ -1610,6 +1742,7 @@
             const bossHud = document.getElementById('boss-hud');
             if (activeBoss) {
                 bossHud.classList.remove('hidden');
+                document.getElementById('boss-title-text').textContent = `☠️ HARİTA ${gameState.mapNumber} BOSS: GOLIATH-X MK-${gameState.mapNumber}`;
                 document.getElementById('boss-hp-text').textContent = `${Math.max(0, Math.round(activeBoss.hp))} / ${activeBoss.maxHp}`;
                 document.getElementById('boss-hp-bar').style.width = `${Math.max(0, (activeBoss.hp / activeBoss.maxHp) * 100)}%`;
             } else {
@@ -1620,22 +1753,28 @@
                 gameState.spawnCooldown -= dt;
                 if (gameState.spawnCooldown <= 0) {
                     spawnEnemyTank(false);
+                    spawnEnemyInfantrySquad(3 + Math.min(3, gameState.wave));
+                    if (gameState.enemiesToSpawn % 2 === 1 || gameState.wave >= 2) {
+                        spawnEnemyJet();
+                    }
                     gameState.enemiesToSpawn--;
-                    gameState.spawnCooldown = Math.max(2.1, 4.5 - gameState.wave * 0.25);
+                    gameState.spawnCooldown = Math.max(2.0, 4.4 - gameState.wave * 0.25);
                 }
-            } else if (enemyTanks.length === 0) {
+            } else if (enemyTanks.length === 0 && enemyJets.length === 0 && enemyInfantry.length === 0) {
                 gameState.waveTimer += dt;
-                if (gameState.waveTimer >= 3.5) {
+                if (gameState.waveTimer >= 3.2) {
                     gameState.waveTimer = 0;
-                    if (gameState.wave >= 6 && !gameState.bossSpawnedInStage) {
-                        gameState.bossSpawnedInStage = true;
-                        document.getElementById('wave-badge').textContent = 'BOSS SAVAŞI';
+                    if (gameState.wave >= 5 && !gameState.bossSpawnedInMap) {
+                        gameState.bossSpawnedInMap = true;
+                        document.getElementById('wave-badge').textContent = `HARİTA ${gameState.mapNumber} BOSSU`;
                         spawnEnemyTank(true);
+                        spawnEnemyInfantrySquad(5);
+                        spawnEnemyJet();
                         SoundFX.playAlert(true);
-                    } else {
+                    } else if (!gameState.bossSpawnedInMap) {
                         gameState.wave++;
                         gameState.enemiesToSpawn = 2 + gameState.wave;
-                        document.getElementById('wave-badge').textContent = `DALGA ${gameState.wave}`;
+                        document.getElementById('wave-badge').textContent = `DALGA ${gameState.wave} / 5`;
                         SoundFX.playAlert(false);
                     }
                 }
@@ -1646,29 +1785,24 @@
                 y: airbase.hqBuilding.y + airbase.hqBuilding.h / 2
             };
 
+            // 1. Düşman Tankları Güncelleme
             for (let i = enemyTanks.length - 1; i >= 0; i--) {
                 const et = enemyTanks[i];
 
-                // 1. Havadaki SİHA veya Jet'e Uçaksavar Ateşi (3 vuruşta düşürür)
                 et.aaCooldown--;
                 if (et.aaCooldown <= 0) {
                     const airTargets = [];
-                    if (units.DRONE.state !== 'IDLE' && units.DRONE.altitude > 0.3) {
-                        airTargets.push({ type: 'DRONE', obj: units.DRONE });
-                    }
-                    if (units.JET.state !== 'IDLE' && units.JET.altitude > 0.3) {
-                        airTargets.push({ type: 'JET', obj: units.JET });
-                    }
+                    if (units.DRONE.state !== 'IDLE' && units.DRONE.altitude > 0.3) airTargets.push({ type: 'DRONE', obj: units.DRONE });
+                    if (units.JET.state !== 'IDLE' && units.JET.altitude > 0.3) airTargets.push({ type: 'JET', obj: units.JET });
                     for (const at of airTargets) {
-                        const dAir = Math.hypot(at.obj.x - et.x, at.obj.y - et.y);
-                        if (dAir < (et.isBoss ? 360 : 285)) {
-                            et.aaCooldown = et.isBoss ? 68 : 95;
+                        if (Math.hypot(at.obj.x - et.x, at.obj.y - et.y) < (et.isBoss ? 380 : 300)) {
+                            et.aaCooldown = et.isBoss ? 65 : 95;
                             const ang = Math.atan2(at.obj.y - et.y, at.obj.x - et.x);
                             SoundFX.playCannon(true);
                             antiAirShells.push({
                                 x: et.x, y: et.y,
-                                vx: Math.cos(ang) * 9.5,
-                                vy: Math.sin(ang) * 9.5,
+                                vx: Math.cos(ang) * 9.8,
+                                vy: Math.sin(ang) * 9.8,
                                 fromFriendly: false,
                                 targetType: at.type
                             });
@@ -1677,11 +1811,16 @@
                     }
                 }
 
-                // 2. Kara Hedefi (ALTAY-X Tankı veya Kale Karargahı)
                 let aimTarget = null;
-                if (units.TANK.alive && Math.hypot(units.TANK.x - et.x, units.TANK.y - et.y) < 290) {
+                for (const bnk of groundBunkers) {
+                    if (bnk.hp > 0 && Math.hypot(bnk.x - et.x, bnk.y - et.y) < 310) {
+                        aimTarget = { x: bnk.x, y: bnk.y };
+                        break;
+                    }
+                }
+                if (!aimTarget && units.TANK.alive && Math.hypot(units.TANK.x - et.x, units.TANK.y - et.y) < 300) {
                     aimTarget = { x: units.TANK.x, y: units.TANK.y };
-                } else if (Math.hypot(hqCenter.x - et.x, hqCenter.y - et.y) < 395) {
+                } else if (!aimTarget && Math.hypot(hqCenter.x - et.x, hqCenter.y - et.y) < 420) {
                     aimTarget = { x: hqCenter.x, y: hqCenter.y };
                 }
 
@@ -1689,36 +1828,112 @@
                     et.turretAngle = Math.atan2(aimTarget.y - et.y, aimTarget.x - et.x);
                     et.fireCooldown--;
                     if (et.fireCooldown <= 0) {
-                        et.fireCooldown = et.isBoss ? 72 : (et.isHeavy ? 140 : 115);
+                        et.fireCooldown = et.isBoss ? 68 : (et.isHeavy ? 135 : 110);
                         SoundFX.playCannon(false);
+                        const bossDmg = Math.round(52 * Math.pow(1.15, gameState.mapNumber - 1));
                         enemyShells.push({
-                            x: et.x + Math.cos(et.turretAngle) * 26,
-                            y: et.y + Math.sin(et.turretAngle) * 26,
-                            vx: Math.cos(et.turretAngle) * 4.8,
-                            vy: Math.sin(et.turretAngle) * 4.8,
-                            damage: et.isBoss ? 55 : (et.isHeavy ? 42 : 26),
+                            x: et.x + Math.cos(et.turretAngle) * 28,
+                            y: et.y + Math.sin(et.turretAngle) * 28,
+                            vx: Math.cos(et.turretAngle) * 5.0,
+                            vy: Math.sin(et.turretAngle) * 5.0,
+                            damage: et.isBoss ? bossDmg : (et.isHeavy ? 44 : 28),
                             isBossShell: et.isBoss
                         });
                     }
                 } else {
-                    // Sadece Karayolu Üzerinden İlerleme (510 dikey yoluna gelince 740 hizasına iner)
                     if (et.turnState === 'ON_H_ROAD') {
-                        if (et.x > 510) {
+                        if (et.x > 540) {
                             et.angle = Math.PI;
                             et.turretAngle = Math.PI;
                             et.x -= et.speed;
                         } else {
-                            et.x = 510;
+                            et.x = 540;
                             et.turnState = 'ON_V_ROAD';
                         }
                     } else if (et.turnState === 'ON_V_ROAD') {
-                        const targetCastleY = 740;
+                        const targetCastleY = 850;
                         const dy = targetCastleY - et.y;
                         if (Math.abs(dy) > 8) {
                             et.angle = dy > 0 ? Math.PI / 2 : -Math.PI / 2;
                             et.turretAngle = et.angle;
                             et.y += Math.sign(dy) * et.speed;
                         }
+                    }
+                }
+            }
+
+            // 2. Düşman Yaya Piyade Askerleri Güncelleme
+            for (let i = enemyInfantry.length - 1; i >= 0; i--) {
+                const inf = enemyInfantry[i];
+                inf.walkPhase += 0.16;
+
+                let shootTarget = null;
+                for (const bnk of groundBunkers) {
+                    if (bnk.hp > 0 && Math.hypot(bnk.x - inf.x, bnk.y - inf.y) < 250) {
+                        shootTarget = { x: bnk.x, y: bnk.y };
+                        break;
+                    }
+                }
+                if (!shootTarget && units.TANK.alive && Math.hypot(units.TANK.x - inf.x, units.TANK.y - inf.y) < 240) {
+                    shootTarget = { x: units.TANK.x, y: units.TANK.y };
+                } else if (!shootTarget && Math.hypot(hqCenter.x - inf.x, hqCenter.y - inf.y) < 330) {
+                    shootTarget = { x: hqCenter.x, y: hqCenter.y };
+                }
+
+                if (shootTarget) {
+                    inf.angle = Math.atan2(shootTarget.y - inf.y, shootTarget.x - inf.x);
+                    inf.fireCooldown--;
+                    if (inf.fireCooldown <= 0) {
+                        inf.fireCooldown = 44;
+                        SoundFX.playRifle();
+                        rifleBullets.push({
+                            x: inf.x + Math.cos(inf.angle) * 14,
+                            y: inf.y + Math.sin(inf.angle) * 14,
+                            vx: Math.cos(inf.angle) * 8.5,
+                            vy: Math.sin(inf.angle) * 8.5,
+                            damage: 7 + Math.floor(gameState.mapNumber * 1.5)
+                        });
+                    }
+                } else {
+                    const dx = hqCenter.x - inf.x;
+                    const dy = hqCenter.y - inf.y;
+                    inf.angle = Math.atan2(dy, dx);
+                    inf.x += Math.cos(inf.angle) * inf.speed;
+                    inf.y += Math.sin(inf.angle) * inf.speed;
+                }
+            }
+
+            // 3. Düşman Savaş Uçakları Güncelleme
+            for (let i = enemyJets.length - 1; i >= 0; i--) {
+                const ej = enemyJets[i];
+                const dx = hqCenter.x - ej.x;
+                const dy = hqCenter.y - ej.y;
+                const dist = Math.hypot(dx, dy);
+
+                if (ej.phase === 'APPROACH') {
+                    ej.angle = Math.atan2(dy, dx);
+                    ej.x += Math.cos(ej.angle) * ej.speed;
+                    ej.y += Math.sin(ej.angle) * ej.speed;
+
+                    ej.fireCooldown--;
+                    if (dist < 480 && ej.fireCooldown <= 0) {
+                        ej.fireCooldown = 110;
+                        SoundFX.playJetMissile();
+                        enemyShells.push({
+                            x: ej.x, y: ej.y,
+                            vx: Math.cos(ej.angle) * 7.2,
+                            vy: Math.sin(ej.angle) * 7.2,
+                            damage: Math.round(38 * Math.pow(1.12, gameState.mapNumber - 1)),
+                            isAirMissile: true
+                        });
+                        ej.phase = 'EVADE';
+                    }
+                } else {
+                    ej.x += ej.speed * 1.15;
+                    ej.y += Math.sin(performance.now() * 0.004 + i) * 1.5;
+                    ej.angle = 0;
+                    if (ej.x > WORLD_W - 80) {
+                        ej.phase = 'APPROACH';
                     }
                 }
             }
@@ -1736,39 +1951,97 @@
 
                 gameState.score += enemy.reward;
                 gameState.kills++;
-                createExplosion(enemy.x, enemy.y, wasBoss ? 2.4 : (enemy.isHeavy ? 1.5 : 1.15));
+                createExplosion(enemy.x, enemy.y, wasBoss ? 2.5 : (enemy.isHeavy ? 1.5 : 1.15));
                 spawnFloatingText(enemy.x, enemy.y - 40, `+${enemy.reward} PUAN`, '#fbbf24');
                 updateUI();
 
-                if (wasBoss && gameState.stage === 1) {
-                    setTimeout(() => transitionToNextMap(), 900);
+                if (wasBoss) {
+                    setTimeout(() => transitionToNextMap(), 950);
                 }
             }
         }
 
-        // ==================== OYUNCU SALDIRI & İNŞA KOMUTLARI ====================
+        function damageEnemyJet(jet, amount) {
+            if (!jet || jet.hp <= 0) return;
+            jet.hp -= amount;
+            spawnFloatingText(jet.x, jet.y - 22, `-${Math.round(amount)}`, '#38bdf8');
+            if (jet.hp <= 0) {
+                const idx = enemyJets.indexOf(jet);
+                if (idx !== -1) enemyJets.splice(idx, 1);
+                gameState.score += jet.reward;
+                gameState.kills++;
+                createExplosion(jet.x, jet.y, 1.45);
+                spawnFloatingText(jet.x, jet.y - 40, `+${jet.reward} PUAN`, '#fbbf24');
+                updateUI();
+            }
+        }
+
+        function damageEnemyInfantry(inf, amount) {
+            if (!inf || inf.hp <= 0) return;
+            inf.hp -= amount;
+            if (inf.hp <= 0) {
+                const idx = enemyInfantry.indexOf(inf);
+                if (idx !== -1) enemyInfantry.splice(idx, 1);
+                gameState.score += inf.reward;
+                gameState.kills++;
+                createExplosion(inf.x, inf.y, 0.55);
+                spawnFloatingText(inf.x, inf.y - 24, `+${inf.reward} PUAN`, '#fbbf24');
+                updateUI();
+            }
+        }
+
+        // ==================== OYUNCU SALDIRI & SAVUNMA İNŞA KOMUTLARI ====================
         function commandAttack(wx, wy) {
             if (gameState.isGameOver) return;
 
-            // Hava Savunma Kulesi İnşası (Tüm birimler Sv.5 olduğunda açılır)
+            const allLv3 = upgrades.DRONE.level >= 3 && upgrades.JET.level >= 3 && upgrades.TANK.level >= 3;
+            const allLv5 = upgrades.DRONE.level >= 5 && upgrades.JET.level >= 5 && upgrades.TANK.level >= 5;
+
+            // Sv.3 Kilidi: Hava Savunma Kalesi İnşası
             if (selectedUnitType === 'AA_TOWER') {
-                const unlocked = upgrades.DRONE.level >= 5 && upgrades.JET.level >= 5 && upgrades.TANK.level >= 5;
-                if (!unlocked || gameState.score < 300) return;
+                if (!allLv3 || gameState.score < 300) return;
                 gameState.score -= 300;
-                aaTowers.push({ x: wx, y: wy, cooldown: 0, angle: 0 });
+                aaCastles.push({ x: wx, y: wy, cooldown: 0, angle: 0, hp: 600, maxHp: 600 });
                 SoundFX.playUpgrade();
-                spawnFloatingText(wx, wy - 20, 'HAVA SAVUNMA KULESİ KURULDU!', '#c084fc');
+                spawnFloatingText(wx, wy - 24, '🏰 HAVA SAVUNMA KALESİ KURULDU!', '#c084fc');
                 selectUnit('DRONE');
                 updateUI();
                 return;
             }
 
-            // Tıklanan noktada düşman tankı veya online rakip var mı?
+            // Sv.5 Kilidi: Yola Kurulan Kara Savunma Mevzisi
+            if (selectedUnitType === 'GROUND_BUNKER') {
+                if (!allLv5 || gameState.score < 400) return;
+                const roadPos = snapToNearestRoad(wx, wy);
+                gameState.score -= 400;
+                groundBunkers.push({
+                    x: roadPos.x,
+                    y: roadPos.y,
+                    cooldown: 0,
+                    angle: 0,
+                    hp: 1100,
+                    maxHp: 1100
+                });
+                SoundFX.playUpgrade();
+                spawnFloatingText(roadPos.x, roadPos.y - 28, '🛡️ YOLA KARA MEVZİSİ KURULDU!', '#fb923c');
+                selectUnit('TANK');
+                updateUI();
+                return;
+            }
+
             let clickedEnemy = null;
-            let bestDist = 65;
+            let bestDist = 75;
             for (const et of enemyTanks) {
                 const d = Math.hypot(et.x - wx, et.y - wy);
                 if (d < bestDist) { bestDist = d; clickedEnemy = et; }
+            }
+            for (const ej of enemyJets) {
+                const d = Math.hypot(ej.x - wx, ej.y - wy);
+                if (d < bestDist) { bestDist = d; clickedEnemy = ej; }
+            }
+            for (const inf of enemyInfantry) {
+                const d = Math.hypot(inf.x - wx, inf.y - wy);
+                if (d < bestDist) { bestDist = d; clickedEnemy = inf; }
             }
 
             let clickedRemotePlayer = null;
@@ -1776,7 +2049,13 @@
             if (gameState.mode === 'MULTI') {
                 Object.values(mpLobby.players).forEach(p => {
                     if (p.id === LOCAL_CLIENT_ID) return;
-                    if (p.tank && p.tank.alive && Math.hypot(p.tank.x - wx, p.tank.y - wy) < 60) {
+                    if (p.tank && p.tank.alive && Math.hypot(p.tank.x - wx, p.tank.y - wy) < 65) {
+                        clickedRemotePlayer = p;
+                    }
+                    if (p.drone && p.drone.state !== 'IDLE' && Math.hypot(p.drone.x - wx, p.drone.y - wy) < 60) {
+                        clickedRemotePlayer = p;
+                    }
+                    if (p.jet && p.jet.state !== 'IDLE' && Math.hypot(p.jet.x - wx, p.jet.y - wy) < 65) {
                         clickedRemotePlayer = p;
                     }
                     const cSlot = MULTI_CASTLE_SLOTS[p.slot];
@@ -1823,7 +2102,7 @@
                 const rCenterX = airbase.runway.x + airbase.runway.w / 2;
                 j.waypoints = [
                     { x: rCenterX, y: j.y, mode: 'TAXI' },
-                    { x: rCenterX, y: 880, mode: 'TAXI' },
+                    { x: rCenterX, y: 1020, mode: 'TAXI' },
                     { x: rCenterX, y: 120, mode: 'RUNWAY_TAKEOFF' }
                 ];
                 j.waypointIndex = 0;
@@ -1849,15 +2128,15 @@
             }
         }
 
-        // ==================== BİRİM & MERMİ GÜNCELLEMELERİ ====================
+        // ==================== BİRİM, KULE & MERMİ GÜNCELLEMELERİ ====================
         function updatePlayerUnits() {
             airbase.hangarDrone.doorOpen += (airbase.hangarDrone.targetDoor - airbase.hangarDrone.doorOpen) * 0.06;
             airbase.hangarJet.doorOpen += (airbase.hangarJet.targetDoor - airbase.hangarJet.doorOpen) * 0.06;
 
-            // --- 1. TB-X SİHA (En fazla 3 atış yapıp hangara döner) ---
+            // --- 1. TB-X SİHA (3 Atış Limiti) ---
             const d = units.DRONE;
             if (d.respawnTimer > 0) d.respawnTimer--;
-            const dSpeed = 4.5 * upgrades.DRONE.speedMult;
+            const dSpeed = 4.6 * upgrades.DRONE.speedMult;
 
             if (d.state === 'DOOR_OPENING') {
                 if (airbase.hangarDrone.doorOpen > 0.85) d.state = 'TAKEOFF';
@@ -1880,7 +2159,7 @@
                     const rt = mpLobby.players[d.targetRemotePlayer.id].tank;
                     tx = rt.x; ty = rt.y;
                 } else {
-                    d.targetEnemy = enemyTanks[0] || null;
+                    d.targetEnemy = enemyTanks[0] || enemyInfantry[0] || enemyJets[0] || null;
                     if (!d.targetEnemy) { d.state = 'RETURN_TO_BASE'; return; }
                     tx = d.targetEnemy.x; ty = d.targetEnemy.y;
                 }
@@ -1890,12 +2169,12 @@
                 const dist = Math.hypot(dx, dy);
                 d.angle = Math.atan2(dy, dx);
 
-                if (dist > 78) {
+                if (dist > 82) {
                     d.x += Math.cos(d.angle) * dSpeed;
                     d.y += Math.sin(d.angle) * dSpeed;
                 } else {
                     d.state = 'ATTACKING';
-                    d.attackTimer = 34;
+                    d.attackTimer = 32;
                     d.laserActive = true;
                 }
             } else if (d.state === 'ATTACKING') {
@@ -1906,11 +2185,18 @@
                     d.ammo = Math.max(0, d.ammo - 1);
                     if (d.targetEnemy && d.targetEnemy.hp > 0) {
                         createExplosion(d.targetEnemy.x, d.targetEnemy.y, 0.7);
-                        damageEnemy(d.targetEnemy, upgrades.DRONE.damage);
+                        if (enemyJets.includes(d.targetEnemy)) {
+                            damageEnemyJet(d.targetEnemy, upgrades.DRONE.damage);
+                        } else if (enemyInfantry.includes(d.targetEnemy)) {
+                            damageEnemyInfantry(d.targetEnemy, upgrades.DRONE.damage);
+                        } else {
+                            damageEnemy(d.targetEnemy, upgrades.DRONE.damage);
+                        }
                     } else if (d.targetRemotePlayer && mpLobby.players[d.targetRemotePlayer.id]?.tank) {
                         const rt = mpLobby.players[d.targetRemotePlayer.id].tank;
                         createExplosion(rt.x, rt.y, 0.7);
                         sendRemoteHitEvent(d.targetRemotePlayer.id, 'TANK', upgrades.DRONE.damage);
+                        rewardOnlineHit(45, rt.x, rt.y);
                     }
                     updateUI();
                 }
@@ -1920,7 +2206,7 @@
                         spawnFloatingText(d.x, d.y - 18, 'MÜHİMMAT BİTTİ - ÜSSE DÖNÜYOR', '#38bdf8');
                         d.state = 'RETURN_TO_BASE';
                     } else if ((d.targetEnemy && d.targetEnemy.hp > 0) || (d.targetRemotePlayer && mpLobby.players[d.targetRemotePlayer.id]?.tank?.alive)) {
-                        d.attackTimer = 30;
+                        d.attackTimer = 28;
                         d.laserActive = true;
                     } else {
                         d.state = 'RETURN_TO_BASE';
@@ -1964,8 +2250,8 @@
                 const dy = wp.y - j.y;
                 const dist = Math.hypot(dx, dy);
                 j.angle = Math.atan2(dy, dx);
-                const spd = wp.mode === 'TAXI' ? 2.6 : 6.8;
-                if (wp.mode === 'RUNWAY_TAKEOFF') j.altitude = Math.min(1, 1 - dist / 760);
+                const spd = wp.mode === 'TAXI' ? 2.8 : 7.0;
+                if (wp.mode === 'RUNWAY_TAKEOFF') j.altitude = Math.min(1, 1 - dist / 880);
 
                 if (dist > 8) {
                     j.x += Math.cos(j.angle) * spd;
@@ -1990,9 +2276,9 @@
                 const dist = Math.hypot(dx, dy);
                 j.angle = Math.atan2(dy, dx);
 
-                if (dist > 170) {
-                    j.x += Math.cos(j.angle) * 8.2;
-                    j.y += Math.sin(j.angle) * 8.2;
+                if (dist > 175) {
+                    j.x += Math.cos(j.angle) * 8.4;
+                    j.y += Math.sin(j.angle) * 8.4;
                 } else {
                     j.state = 'ATTACKING';
                     j.attackTimer = 22;
@@ -2007,14 +2293,14 @@
                 }
             } else if (j.state === 'ATTACKING') {
                 j.attackTimer--;
-                j.x += Math.cos(j.angle) * 7.2;
-                j.y += Math.sin(j.angle) * 7.2;
+                j.x += Math.cos(j.angle) * 7.4;
+                j.y += Math.sin(j.angle) * 7.4;
                 if (j.attackTimer <= 0) {
                     j.state = 'RETURN_TO_BASE';
                     const rCenterX = airbase.runway.x + airbase.runway.w / 2;
                     j.waypoints = [
                         { x: rCenterX, y: 110, mode: 'APPROACH' },
-                        { x: rCenterX, y: 860, mode: 'LANDING_ROLL' },
+                        { x: rCenterX, y: 1000, mode: 'LANDING_ROLL' },
                         { x: rCenterX, y: j.homeY, mode: 'TAXI' },
                         { x: j.homeX, y: j.homeY, mode: 'TAXI' }
                     ];
@@ -2026,10 +2312,10 @@
                 const dy = wp.y - j.y;
                 const dist = Math.hypot(dx, dy);
                 j.angle = Math.atan2(dy, dx);
-                let spd = wp.mode === 'APPROACH' ? 7.0 : (wp.mode === 'LANDING_ROLL' ? 4.2 : 2.5);
+                let spd = wp.mode === 'APPROACH' ? 7.2 : (wp.mode === 'LANDING_ROLL' ? 4.4 : 2.6);
                 if (wp.mode === 'LANDING_ROLL') {
-                    j.altitude = Math.min(1, dist / 740);
-                    if (dist < 320) airbase.hangarJet.targetDoor = 1;
+                    j.altitude = Math.min(1, dist / 860);
+                    if (dist < 340) airbase.hangarJet.targetDoor = 1;
                 } else if (wp.mode === 'TAXI') {
                     j.altitude = 0;
                 }
@@ -2058,11 +2344,11 @@
                 const dy = m.ty - m.y;
                 const dist = Math.hypot(dx, dy);
                 m.angle = Math.atan2(dy, dx);
-                m.x += Math.cos(m.angle) * 12.2;
-                m.y += Math.sin(m.angle) * 12.2;
+                m.x += Math.cos(m.angle) * 12.5;
+                m.y += Math.sin(m.angle) * 12.5;
 
-                if (dist < 14) {
-                    createExplosion(m.tx, m.ty, 1.55);
+                if (dist < 15) {
+                    createExplosion(m.tx, m.ty, 1.6);
                     const blastR = upgrades.JET.blastRadius;
                     for (let k = enemyTanks.length - 1; k >= 0; k--) {
                         const et = enemyTanks[k];
@@ -2070,14 +2356,27 @@
                             damageEnemy(et, upgrades.JET.damage);
                         }
                     }
+                    for (let k = enemyInfantry.length - 1; k >= 0; k--) {
+                        const inf = enemyInfantry[k];
+                        if (Math.hypot(inf.x - m.tx, inf.y - m.ty) <= blastR + 15) {
+                            damageEnemyInfantry(inf, upgrades.JET.damage);
+                        }
+                    }
+                    for (let k = enemyJets.length - 1; k >= 0; k--) {
+                        const ej = enemyJets[k];
+                        if (Math.hypot(ej.x - m.tx, ej.y - m.ty) <= blastR + 20) {
+                            damageEnemyJet(ej, upgrades.JET.damage);
+                        }
+                    }
                     if (m.targetRemotePlayer) {
                         sendRemoteHitEvent(m.targetRemotePlayer.id, 'TANK', upgrades.JET.damage);
+                        rewardOnlineHit(85, m.tx, m.ty);
                     }
                     j.missiles.splice(i, 1);
                 }
             }
 
-            // --- 3. ALTAY-X DOST TANK (Sadece Karayolu Üzerinde İlerler, Kara & Havaya Ateş Eder) ---
+            // --- 3. ALTAY-X DOST TANK ---
             const t = units.TANK;
             if (!t.alive) {
                 t.respawnTimer--;
@@ -2085,7 +2384,7 @@
                     t.alive = true;
                     t.maxHp = upgrades.TANK.maxHp;
                     t.hp = t.maxHp;
-                    const spawnP = gameState.mode === 'MULTI' ? MULTI_CASTLE_SLOTS[mpLobby.mySlot].tankSpawn : { x: 510, y: 520 };
+                    const spawnP = gameState.mode === 'MULTI' ? MULTI_CASTLE_SLOTS[mpLobby.mySlot].tankSpawn : { x: 540, y: 610 };
                     t.x = spawnP.x; t.y = spawnP.y;
                     t.waypoints = [];
                 }
@@ -2095,7 +2394,6 @@
             if (t.reloadTimer > 0) t.reloadTimer--;
             if (t.aaCooldown > 0) t.aaCooldown--;
 
-            // Karayolu ara noktalarını takip et
             if (t.waypoints && t.waypoints.length > 0) {
                 const wp = t.waypoints[0];
                 const dx = wp.x - t.x;
@@ -2103,7 +2401,7 @@
                 const dist = Math.hypot(dx, dy);
                 if (dist > 6) {
                     t.angle = Math.atan2(dy, dx);
-                    const spd = 2.0 * upgrades.TANK.speedMult;
+                    const spd = 2.05 * upgrades.TANK.speedMult;
                     t.x += Math.cos(t.angle) * spd;
                     t.y += Math.sin(t.angle) * spd;
                 } else {
@@ -2111,28 +2409,35 @@
                 }
             }
 
-            // Kara Hedefine Ateş (Düşman Tankı, Rakip Tank veya Rakip Kale)
             let groundTarget = null;
-            if (t.targetEnemy && t.targetEnemy.hp > 0 && Math.hypot(t.targetEnemy.x - t.x, t.targetEnemy.y - t.y) < 285) {
-                groundTarget = { x: t.targetEnemy.x, y: t.targetEnemy.y, type: 'AI_ENEMY', obj: t.targetEnemy };
+            if (t.targetEnemy && t.targetEnemy.hp > 0 && !enemyJets.includes(t.targetEnemy) && Math.hypot(t.targetEnemy.x - t.x, t.targetEnemy.y - t.y) < 310) {
+                groundTarget = { x: t.targetEnemy.x, y: t.targetEnemy.y, type: 'AI_ENEMY' };
             } else if (t.targetCastlePlayer && gameState.mode === 'MULTI') {
                 const cSlot = MULTI_CASTLE_SLOTS[t.targetCastlePlayer.slot];
                 const cx = cSlot.x + cSlot.w / 2;
                 const cy = cSlot.y + cSlot.h / 2;
-                if (Math.hypot(cx - t.x, cy - t.y) < 340) {
+                if (Math.hypot(cx - t.x, cy - t.y) < 350) {
                     groundTarget = { x: cx, y: cy, type: 'REMOTE_CASTLE', playerId: t.targetCastlePlayer.id };
                 }
             } else {
                 for (const et of enemyTanks) {
-                    if (Math.hypot(et.x - t.x, et.y - t.y) < 285) {
-                        groundTarget = { x: et.x, y: et.y, type: 'AI_ENEMY', obj: et };
+                    if (Math.hypot(et.x - t.x, et.y - t.y) < 310) {
+                        groundTarget = { x: et.x, y: et.y, type: 'AI_ENEMY' };
                         break;
+                    }
+                }
+                if (!groundTarget) {
+                    for (const inf of enemyInfantry) {
+                        if (Math.hypot(inf.x - t.x, inf.y - t.y) < 300) {
+                            groundTarget = { x: inf.x, y: inf.y, type: 'AI_INFANTRY' };
+                            break;
+                        }
                     }
                 }
                 if (!groundTarget && gameState.mode === 'MULTI') {
                     for (const p of Object.values(mpLobby.players)) {
                         if (p.id === LOCAL_CLIENT_ID || !p.tank || !p.tank.alive) continue;
-                        if (Math.hypot(p.tank.x - t.x, p.tank.y - t.y) < 285) {
+                        if (Math.hypot(p.tank.x - t.x, p.tank.y - t.y) < 300) {
                             groundTarget = { x: p.tank.x, y: p.tank.y, type: 'REMOTE_TANK', playerId: p.id };
                             break;
                         }
@@ -2143,13 +2448,13 @@
             if (groundTarget) {
                 t.turretAngle = Math.atan2(groundTarget.y - t.y, groundTarget.x - t.x);
                 if (t.reloadTimer <= 0) {
-                    t.reloadTimer = 48;
+                    t.reloadTimer = 46;
                     SoundFX.playCannon(false);
                     friendlyShells.push({
                         x: t.x + Math.cos(t.turretAngle) * 28,
                         y: t.y + Math.sin(t.turretAngle) * 28,
-                        vx: Math.cos(t.turretAngle) * 8.2,
-                        vy: Math.sin(t.turretAngle) * 8.2,
+                        vx: Math.cos(t.turretAngle) * 8.4,
+                        vy: Math.sin(t.turretAngle) * 8.4,
                         damage: upgrades.TANK.damage,
                         remoteTargetType: groundTarget.type,
                         remotePlayerId: groundTarget.playerId
@@ -2159,66 +2464,185 @@
                 t.turretAngle = t.angle;
             }
 
-            // Havaya Uçaksavar Ateşi (Online modda rakip SİHA veya Jet'e 3 vuruşta düşürür)
-            if (gameState.mode === 'MULTI' && t.aaCooldown <= 0) {
-                for (const p of Object.values(mpLobby.players)) {
-                    if (p.id === LOCAL_CLIENT_ID) continue;
-                    if (p.drone && p.drone.state !== 'IDLE' && Math.hypot(p.drone.x - t.x, p.drone.y - t.y) < 310) {
-                        t.aaCooldown = 70;
-                        const ang = Math.atan2(p.drone.y - t.y, p.drone.x - t.x);
+            // Tank Uçaksavar Ateşi
+            if (t.aaCooldown <= 0) {
+                for (const ej of enemyJets) {
+                    if (Math.hypot(ej.x - t.x, ej.y - t.y) < 340) {
+                        t.aaCooldown = 62;
+                        const ang = Math.atan2(ej.y - t.y, ej.x - t.x);
                         SoundFX.playCannon(true);
                         antiAirShells.push({
                             x: t.x, y: t.y,
-                            vx: Math.cos(ang) * 10,
-                            vy: Math.sin(ang) * 10,
+                            vx: Math.cos(ang) * 11,
+                            vy: Math.sin(ang) * 11,
                             fromFriendly: true,
-                            remotePlayerId: p.id,
-                            remoteAirType: 'DRONE'
-                        });
-                        break;
-                    }
-                    if (p.jet && p.jet.state !== 'IDLE' && Math.hypot(p.jet.x - t.x, p.jet.y - t.y) < 330) {
-                        t.aaCooldown = 70;
-                        const ang = Math.atan2(p.jet.y - t.y, p.jet.x - t.x);
-                        SoundFX.playCannon(true);
-                        antiAirShells.push({
-                            x: t.x, y: t.y,
-                            vx: Math.cos(ang) * 10,
-                            vy: Math.sin(ang) * 10,
-                            fromFriendly: true,
-                            remotePlayerId: p.id,
-                            remoteAirType: 'JET'
+                            targetEnemyJet: ej,
+                            damage: upgrades.TANK.damage
                         });
                         break;
                     }
                 }
-            }
-
-            // İnşa Edilmiş Hava Savunma Kuleleri
-            aaTowers.forEach(tower => {
-                if (tower.cooldown > 0) tower.cooldown--;
-                if (tower.cooldown <= 0 && gameState.mode === 'MULTI') {
+                if (t.aaCooldown <= 0 && gameState.mode === 'MULTI') {
                     for (const p of Object.values(mpLobby.players)) {
                         if (p.id === LOCAL_CLIENT_ID) continue;
-                        const targetAir = (p.drone && p.drone.state !== 'IDLE') ? { obj: p.drone, type: 'DRONE' }
-                            : ((p.jet && p.jet.state !== 'IDLE') ? { obj: p.jet, type: 'JET' } : null);
-                        if (targetAir && Math.hypot(targetAir.obj.x - tower.x, targetAir.obj.y - tower.y) < 420) {
-                            tower.cooldown = 45;
-                            tower.angle = Math.atan2(targetAir.obj.y - tower.y, targetAir.obj.x - tower.x);
+                        if (p.drone && p.drone.state !== 'IDLE' && Math.hypot(p.drone.x - t.x, p.drone.y - t.y) < 330) {
+                            t.aaCooldown = 68;
+                            const ang = Math.atan2(p.drone.y - t.y, p.drone.x - t.x);
                             SoundFX.playCannon(true);
                             antiAirShells.push({
-                                x: tower.x, y: tower.y,
-                                vx: Math.cos(tower.angle) * 11,
-                                vy: Math.sin(tower.angle) * 11,
-                                fromFriendly: true,
-                                remotePlayerId: p.id,
-                                remoteAirType: targetAir.type
+                                x: t.x, y: t.y, vx: Math.cos(ang) * 10.5, vy: Math.sin(ang) * 10.5,
+                                fromFriendly: true, remotePlayerId: p.id, remoteAirType: 'DRONE'
+                            });
+                            break;
+                        }
+                        if (p.jet && p.jet.state !== 'IDLE' && Math.hypot(p.jet.x - t.x, p.jet.y - t.y) < 340) {
+                            t.aaCooldown = 68;
+                            const ang = Math.atan2(p.jet.y - t.y, p.jet.x - t.x);
+                            SoundFX.playCannon(true);
+                            antiAirShells.push({
+                                x: t.x, y: t.y, vx: Math.cos(ang) * 10.5, vy: Math.sin(ang) * 10.5,
+                                fromFriendly: true, remotePlayerId: p.id, remoteAirType: 'JET'
                             });
                             break;
                         }
                     }
                 }
+            }
+
+            // --- 4. HAVA SAVUNMA KALELERİ (Sv.3 Kilidi) ---
+            aaCastles.forEach(tower => {
+                if (tower.cooldown > 0) tower.cooldown--;
+                if (tower.cooldown > 0) return;
+
+                for (const ej of enemyJets) {
+                    if (Math.hypot(ej.x - tower.x, ej.y - tower.y) < 460) {
+                        tower.cooldown = 38;
+                        tower.angle = Math.atan2(ej.y - tower.y, ej.x - tower.x);
+                        SoundFX.playCannon(true);
+                        antiAirShells.push({
+                            x: tower.x, y: tower.y,
+                            vx: Math.cos(tower.angle) * 12,
+                            vy: Math.sin(tower.angle) * 12,
+                            fromFriendly: true,
+                            targetEnemyJet: ej,
+                            damage: 90
+                        });
+                        return;
+                    }
+                }
+                if (gameState.mode === 'MULTI') {
+                    for (const p of Object.values(mpLobby.players)) {
+                        if (p.id === LOCAL_CLIENT_ID) continue;
+                        const targetAir = (p.drone && p.drone.state !== 'IDLE') ? { obj: p.drone, type: 'DRONE' }
+                            : ((p.jet && p.jet.state !== 'IDLE') ? { obj: p.jet, type: 'JET' } : null);
+                        if (targetAir && Math.hypot(targetAir.obj.x - tower.x, targetAir.obj.y - tower.y) < 460) {
+                            tower.cooldown = 42;
+                            tower.angle = Math.atan2(targetAir.obj.y - tower.y, targetAir.obj.x - tower.x);
+                            SoundFX.playCannon(true);
+                            antiAirShells.push({
+                                x: tower.x, y: tower.y,
+                                vx: Math.cos(tower.angle) * 11.5,
+                                vy: Math.sin(tower.angle) * 11.5,
+                                fromFriendly: true,
+                                remotePlayerId: p.id,
+                                remoteAirType: targetAir.type
+                            });
+                            return;
+                        }
+                    }
+                }
             });
+
+            // --- 5. YOLA KURULAN KARA SAVUNMA MEVZİLERİ (Sv.5 Kilidi) ---
+            for (let i = groundBunkers.length - 1; i >= 0; i--) {
+                const bnk = groundBunkers[i];
+                if (bnk.hp <= 0) {
+                    groundBunkers.splice(i, 1);
+                    continue;
+                }
+                if (bnk.cooldown > 0) bnk.cooldown--;
+                if (bnk.cooldown > 0) continue;
+
+                let targetFound = false;
+                for (const et of enemyTanks) {
+                    if (Math.hypot(et.x - bnk.x, et.y - bnk.y) < 410) {
+                        bnk.cooldown = 40;
+                        bnk.angle = Math.atan2(et.y - bnk.y, et.x - bnk.x);
+                        SoundFX.playCannon(false);
+                        friendlyShells.push({
+                            x: bnk.x + Math.cos(bnk.angle) * 28,
+                            y: bnk.y + Math.sin(bnk.angle) * 28,
+                            vx: Math.cos(bnk.angle) * 9.2,
+                            vy: Math.sin(bnk.angle) * 9.2,
+                            damage: 120
+                        });
+                        targetFound = true;
+                        break;
+                    }
+                }
+
+                if (!targetFound) {
+                    for (const inf of enemyInfantry) {
+                        if (Math.hypot(inf.x - bnk.x, inf.y - bnk.y) < 390) {
+                            bnk.cooldown = 36;
+                            bnk.angle = Math.atan2(inf.y - bnk.y, inf.x - bnk.x);
+                            SoundFX.playCannon(false);
+                            friendlyShells.push({
+                                x: bnk.x + Math.cos(bnk.angle) * 28,
+                                y: bnk.y + Math.sin(bnk.angle) * 28,
+                                vx: Math.cos(bnk.angle) * 9.5,
+                                vy: Math.sin(bnk.angle) * 9.5,
+                                damage: 120
+                            });
+                            targetFound = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!targetFound && gameState.mode === 'MULTI') {
+                    for (const p of Object.values(mpLobby.players)) {
+                        if (p.id === LOCAL_CLIENT_ID) continue;
+                        if (p.tank && p.tank.alive && Math.hypot(p.tank.x - bnk.x, p.tank.y - bnk.y) < 410) {
+                            bnk.cooldown = 42;
+                            bnk.angle = Math.atan2(p.tank.y - bnk.y, p.tank.x - bnk.x);
+                            SoundFX.playCannon(false);
+                            friendlyShells.push({
+                                x: bnk.x + Math.cos(bnk.angle) * 28,
+                                y: bnk.y + Math.sin(bnk.angle) * 28,
+                                vx: Math.cos(bnk.angle) * 9.2,
+                                vy: Math.sin(bnk.angle) * 9.2,
+                                damage: 120,
+                                remoteTargetType: 'REMOTE_TANK',
+                                remotePlayerId: p.id
+                            });
+                            targetFound = true;
+                            break;
+                        }
+                        const cs = MULTI_CASTLE_SLOTS[p.slot];
+                        if (cs) {
+                            const cx = cs.x + cs.w / 2;
+                            const cy = cs.y + cs.h / 2;
+                            if (Math.hypot(cx - bnk.x, cy - bnk.y) < 440) {
+                                bnk.cooldown = 45;
+                                bnk.angle = Math.atan2(cy - bnk.y, cx - bnk.x);
+                                SoundFX.playCannon(false);
+                                friendlyShells.push({
+                                    x: bnk.x + Math.cos(bnk.angle) * 28,
+                                    y: bnk.y + Math.sin(bnk.angle) * 28,
+                                    vx: Math.cos(bnk.angle) * 9.2,
+                                    vy: Math.sin(bnk.angle) * 9.2,
+                                    damage: 120,
+                                    remoteTargetType: 'REMOTE_CASTLE',
+                                    remotePlayerId: p.id
+                                });
+                                targetFound = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         function updateProjectiles() {
@@ -2230,7 +2654,7 @@
 
                 for (let j = enemyTanks.length - 1; j >= 0; j--) {
                     const et = enemyTanks[j];
-                    const hitRadius = et.isBoss ? 44 : 26;
+                    const hitRadius = et.isBoss ? 48 : 28;
                     if (Math.hypot(et.x - s.x, et.y - s.y) < hitRadius) {
                         createExplosion(s.x, s.y, 0.55);
                         damageEnemy(et, s.damage);
@@ -2239,18 +2663,32 @@
                     }
                 }
 
+                if (!hit) {
+                    for (let j = enemyInfantry.length - 1; j >= 0; j--) {
+                        const inf = enemyInfantry[j];
+                        if (Math.hypot(inf.x - s.x, inf.y - s.y) < 22) {
+                            createExplosion(s.x, s.y, 0.5);
+                            damageEnemyInfantry(inf, s.damage);
+                            hit = true;
+                            break;
+                        }
+                    }
+                }
+
                 if (!hit && gameState.mode === 'MULTI' && s.remotePlayerId) {
                     const rp = mpLobby.players[s.remotePlayerId];
                     if (rp) {
-                        if (s.remoteTargetType === 'REMOTE_TANK' && rp.tank && Math.hypot(rp.tank.x - s.x, rp.tank.y - s.y) < 28) {
-                            createExplosion(s.x, s.y, 0.6);
+                        if (s.remoteTargetType === 'REMOTE_TANK' && rp.tank && Math.hypot(rp.tank.x - s.x, rp.tank.y - s.y) < 30) {
+                            createExplosion(s.x, s.y, 0.65);
                             sendRemoteHitEvent(rp.id, 'TANK', s.damage);
+                            rewardOnlineHit(40, s.x, s.y);
                             hit = true;
                         } else if (s.remoteTargetType === 'REMOTE_CASTLE') {
                             const cs = MULTI_CASTLE_SLOTS[rp.slot];
                             if (cs && s.x >= cs.x && s.x <= cs.x + cs.w && s.y >= cs.y && s.y <= cs.y + cs.h) {
-                                createExplosion(s.x, s.y, 0.75);
+                                createExplosion(s.x, s.y, 0.8);
                                 sendRemoteHitEvent(rp.id, 'CASTLE', s.damage);
+                                rewardOnlineHit(55, s.x, s.y);
                                 hit = true;
                             }
                         }
@@ -2262,12 +2700,23 @@
                 }
             }
 
-            // Düşman Top Mermileri
+            // Düşman Top & Hava Füzesi Mermileri
             for (let i = enemyShells.length - 1; i >= 0; i--) {
                 const s = enemyShells[i];
                 s.x += s.vx; s.y += s.vy;
+                let hit = false;
 
-                if (units.TANK.alive && Math.hypot(units.TANK.x - s.x, units.TANK.y - s.y) < 25) {
+                for (const bnk of groundBunkers) {
+                    if (bnk.hp > 0 && Math.hypot(bnk.x - s.x, bnk.y - s.y) < 28) {
+                        bnk.hp -= s.damage;
+                        createExplosion(s.x, s.y, 0.55);
+                        spawnFloatingText(bnk.x, bnk.y - 22, `MEVZİ -${s.damage}`, '#fb923c');
+                        hit = true;
+                        break;
+                    }
+                }
+
+                if (!hit && units.TANK.alive && Math.hypot(units.TANK.x - s.x, units.TANK.y - s.y) < 26) {
                     units.TANK.hp -= s.damage;
                     createExplosion(s.x, s.y, 0.5);
                     spawnFloatingText(units.TANK.x, units.TANK.y - 22, `-${s.damage}`, '#fb7185');
@@ -2276,33 +2725,74 @@
                         units.TANK.respawnTimer = 420;
                         createExplosion(units.TANK.x, units.TANK.y, 1.3);
                     }
-                    enemyShells.splice(i, 1);
-                    continue;
+                    hit = true;
                 }
 
-                const hq = airbase.hqBuilding;
-                if (s.x >= hq.x - 16 && s.x <= hq.x + hq.w + 16 && s.y >= hq.y - 16 && s.y <= hq.y + hq.h + 16) {
-                    gameState.hqHp = Math.max(0, gameState.hqHp - s.damage);
-                    createExplosion(s.x, s.y, 0.65);
-                    spawnFloatingText(s.x, s.y - 15, `KALE -${s.damage}`, '#ef4444');
-                    updateUI();
+                if (!hit) {
+                    const hq = airbase.hqBuilding;
+                    if (s.x >= hq.x - 16 && s.x <= hq.x + hq.w + 16 && s.y >= hq.y - 16 && s.y <= hq.y + hq.h + 16) {
+                        gameState.hqHp = Math.max(0, gameState.hqHp - s.damage);
+                        createExplosion(s.x, s.y, 0.65);
+                        spawnFloatingText(s.x, s.y - 15, `KALE -${s.damage}`, '#ef4444');
+                        updateUI();
 
-                    if (gameState.hqHp <= 0 && !gameState.isGameOver) {
-                        gameState.isGameOver = true;
-                        document.getElementById('final-wave').textContent = gameState.wave;
-                        document.getElementById('final-kills').textContent = gameState.kills;
-                        document.getElementById('game-over-overlay').classList.remove('hidden');
+                        if (gameState.hqHp <= 0 && !gameState.isGameOver) {
+                            gameState.isGameOver = true;
+                            document.getElementById('final-wave').textContent = `Harita ${gameState.mapNumber}`;
+                            document.getElementById('final-kills').textContent = gameState.kills;
+                            document.getElementById('game-over-overlay').classList.remove('hidden');
+                        }
+                        hit = true;
                     }
-                    enemyShells.splice(i, 1);
-                    continue;
                 }
 
-                if (s.x < 0 || s.x > WORLD_W || s.y < 0 || s.y > WORLD_H) {
+                if (hit || s.x < 0 || s.x > WORLD_W || s.y < 0 || s.y > WORLD_H) {
                     enemyShells.splice(i, 1);
                 }
             }
 
-            // Uçaksavar Mermileri (3 Vuruşta Uçak Düşürür)
+            // Düşman Piyade Tüfek Mermileri
+            for (let i = rifleBullets.length - 1; i >= 0; i--) {
+                const rb = rifleBullets[i];
+                rb.x += rb.vx; rb.y += rb.vy;
+                let hit = false;
+
+                for (const bnk of groundBunkers) {
+                    if (bnk.hp > 0 && Math.hypot(bnk.x - rb.x, bnk.y - rb.y) < 25) {
+                        bnk.hp -= rb.damage;
+                        hit = true;
+                        break;
+                    }
+                }
+                if (!hit && units.TANK.alive && Math.hypot(units.TANK.x - rb.x, units.TANK.y - rb.y) < 24) {
+                    units.TANK.hp -= rb.damage;
+                    if (units.TANK.hp <= 0) {
+                        units.TANK.alive = false;
+                        units.TANK.respawnTimer = 420;
+                    }
+                    hit = true;
+                }
+                if (!hit) {
+                    const hq = airbase.hqBuilding;
+                    if (rb.x >= hq.x - 12 && rb.x <= hq.x + hq.w + 12 && rb.y >= hq.y - 12 && rb.y <= hq.y + hq.h + 12) {
+                        gameState.hqHp = Math.max(0, gameState.hqHp - rb.damage);
+                        updateUI();
+                        if (gameState.hqHp <= 0 && !gameState.isGameOver) {
+                            gameState.isGameOver = true;
+                            document.getElementById('final-wave').textContent = `Harita ${gameState.mapNumber}`;
+                            document.getElementById('final-kills').textContent = gameState.kills;
+                            document.getElementById('game-over-overlay').classList.remove('hidden');
+                        }
+                        hit = true;
+                    }
+                }
+
+                if (hit || rb.x < 0 || rb.x > WORLD_W || rb.y < 0 || rb.y > WORLD_H) {
+                    rifleBullets.splice(i, 1);
+                }
+            }
+
+            // Uçaksavar Mermileri
             for (let i = antiAirShells.length - 1; i >= 0; i--) {
                 const aa = antiAirShells[i];
                 aa.x += aa.vx; aa.y += aa.vy;
@@ -2338,13 +2828,20 @@
                         }
                         hit = true;
                     }
-                } else if (aa.remotePlayerId) {
-                    const rp = mpLobby.players[aa.remotePlayerId];
-                    const airObj = aa.remoteAirType === 'DRONE' ? rp?.drone : rp?.jet;
-                    if (airObj && Math.hypot(airObj.x - aa.x, airObj.y - aa.y) < 28) {
-                        createExplosion(aa.x, aa.y, 0.55);
-                        sendRemoteHitEvent(aa.remotePlayerId, aa.remoteAirType, 1);
+                } else {
+                    if (aa.targetEnemyJet && aa.targetEnemyJet.hp > 0 && Math.hypot(aa.targetEnemyJet.x - aa.x, aa.targetEnemyJet.y - aa.y) < 30) {
+                        createExplosion(aa.x, aa.y, 0.6);
+                        damageEnemyJet(aa.targetEnemyJet, aa.damage || 85);
                         hit = true;
+                    } else if (aa.remotePlayerId) {
+                        const rp = mpLobby.players[aa.remotePlayerId];
+                        const airObj = aa.remoteAirType === 'DRONE' ? rp?.drone : rp?.jet;
+                        if (airObj && Math.hypot(airObj.x - aa.x, airObj.y - aa.y) < 28) {
+                            createExplosion(aa.x, aa.y, 0.55);
+                            sendRemoteHitEvent(aa.remotePlayerId, aa.remoteAirType, 1);
+                            rewardOnlineHit(65, aa.x, aa.y);
+                            hit = true;
+                        }
                     }
                 }
 
@@ -2385,15 +2882,74 @@
             }
         }
 
-        // ==================== 3D KALE & HARİTA ÇİZİM MOTORU ====================
-        function draw3DCastleStructure(x, y, w, h, colorSet, ownerName, hp, maxHp) {
-            // Zemin 3B Gölgesi
-            ctx.fillStyle = 'rgba(2, 6, 23, 0.85)';
+        // ==================== FULL HD 3D HARİTA, PARK, BAHÇE, SÜS HAVUZU & KARAKTER ÇİZİCİSİ ====================
+        function drawParkAndFountain(pk, theme) {
+            ctx.fillStyle = '#1e293b';
+            ctx.beginPath(); ctx.roundRect(pk.x, pk.y, pk.w, pk.h, 14); ctx.fill();
+
+            ctx.fillStyle = theme.grass;
+            ctx.beginPath(); ctx.roundRect(pk.x + 8, pk.y + 8, pk.w - 16, pk.h - 16, 10); ctx.fill();
+
+            ctx.strokeStyle = 'rgba(226, 232, 240, 0.25)';
+            ctx.lineWidth = 10;
             ctx.beginPath();
-            ctx.roundRect(x + 12, y + 14, w, h, 14);
+            ctx.moveTo(pk.x + 14, pk.y + 14); ctx.lineTo(pk.x + pk.w - 14, pk.y + pk.h - 14);
+            ctx.moveTo(pk.x + pk.w - 14, pk.y + 14); ctx.lineTo(pk.x + 14, pk.y + pk.h - 14);
+            ctx.stroke();
+
+            const cx = pk.x + pk.w / 2;
+            const cy = pk.y + pk.h / 2;
+            const pulse = Math.sin(performance.now() * 0.004) * 5;
+
+            ctx.fillStyle = '#334155';
+            ctx.beginPath();
+            if (pk.fountainType === 'ROUND') {
+                ctx.arc(cx, cy, 46, 0, Math.PI * 2);
+            } else {
+                ctx.roundRect(cx - 52, cy - 36, 104, 72, 14);
+            }
             ctx.fill();
 
-            // Dış Surlar (3B Derinlikli Taş Duvar)
+            const waterGrad = ctx.createRadialGradient(cx, cy, 4, cx, cy, 40);
+            waterGrad.addColorStop(0, '#7dd3fc');
+            waterGrad.addColorStop(0.6, theme.water);
+            waterGrad.addColorStop(1, '#0369a1');
+            ctx.fillStyle = waterGrad;
+            ctx.beginPath();
+            if (pk.fountainType === 'ROUND') {
+                ctx.arc(cx, cy, 39, 0, Math.PI * 2);
+            } else {
+                ctx.roundRect(cx - 45, cy - 29, 90, 58, 10);
+            }
+            ctx.fill();
+
+            ctx.strokeStyle = 'rgba(224, 242, 254, 0.75)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(cx, cy, 12 + pulse, 0, Math.PI * 2);
+            ctx.stroke();
+
+            pk.trees.forEach((tr, idx) => {
+                const tx = pk.x + pk.w * tr.rx;
+                const ty = pk.y + pk.h * tr.ry;
+
+                ctx.fillStyle = 'rgba(2, 6, 23, 0.45)';
+                ctx.beginPath(); ctx.arc(tx + 5, ty + 6, tr.r, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = idx % 2 === 0 ? '#16a34a' : '#22c55e';
+                ctx.beginPath(); ctx.arc(tx, ty, tr.r, 0, Math.PI * 2); ctx.fill();
+
+                ctx.fillStyle = '#86efac';
+                ctx.beginPath(); ctx.arc(tx - 4, ty - 4, tr.r * 0.45, 0, Math.PI * 2); ctx.fill();
+            });
+        }
+
+        function draw3DCastleStructure(x, y, w, h, colorSet, ownerName, hp, maxHp) {
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.88)';
+            ctx.beginPath();
+            ctx.roundRect(x + 14, y + 16, w, h, 14);
+            ctx.fill();
+
             ctx.fillStyle = '#1e293b';
             ctx.strokeStyle = colorSet.primary;
             ctx.lineWidth = 3.5;
@@ -2402,13 +2958,11 @@
             ctx.fill();
             ctx.stroke();
 
-            // İç Kale Avlusu
             ctx.fillStyle = colorSet.hull;
             ctx.beginPath();
             ctx.roundRect(x + 18, y + 18, w - 36, h - 36, 8);
             ctx.fill();
 
-            // 4 Köşe Kale Burcu (3D Silindirik Kuleler)
             const towers = [
                 [x + 6, y + 6],
                 [x + w - 6, y + 6],
@@ -2416,29 +2970,27 @@
                 [x + w - 6, y + h - 6]
             ];
             towers.forEach(([tx, ty]) => {
-                ctx.fillStyle = 'rgba(2, 6, 23, 0.8)';
-                ctx.beginPath(); ctx.arc(tx + 4, ty + 5, 22, 0, Math.PI * 2); ctx.fill();
+                ctx.fillStyle = 'rgba(2, 6, 23, 0.85)';
+                ctx.beginPath(); ctx.arc(tx + 5, ty + 6, 23, 0, Math.PI * 2); ctx.fill();
 
                 ctx.fillStyle = '#334155';
                 ctx.strokeStyle = colorSet.primary;
                 ctx.lineWidth = 3;
-                ctx.beginPath(); ctx.arc(tx, ty, 21, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+                ctx.beginPath(); ctx.arc(tx, ty, 22, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
 
                 ctx.fillStyle = colorSet.dark;
                 ctx.beginPath(); ctx.arc(tx, ty, 12, 0, Math.PI * 2); ctx.fill();
             });
 
-            // Merkez Komuta Kulesi & Sancak
             const cx = x + w / 2;
             const cy = y + h / 2;
             ctx.fillStyle = '#0f172a';
             ctx.strokeStyle = colorSet.primary;
             ctx.lineWidth = 2.5;
-            ctx.beginPath(); ctx.arc(cx, cy, 38, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.beginPath(); ctx.arc(cx, cy, 40, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
 
-            // Etiket & Can Barı
             ctx.fillStyle = '#f8fafc';
-            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.font = 'bold 13px "JetBrains Mono", monospace';
             ctx.textAlign = 'center';
             ctx.fillText(ownerName, cx, y - 10);
             ctx.textAlign = 'left';
@@ -2450,34 +3002,70 @@
             ctx.fillRect(x + 24, y + h - 22, (w - 48) * pct, 10);
         }
 
-        function drawWorld() {
+        function drawEnemyInfantrySoldier(inf) {
             ctx.save();
-            ctx.scale(scaleX, scaleY);
+            ctx.translate(inf.x, inf.y);
 
-            ctx.fillStyle = gameState.stage === 1 ? '#0a111f' : '#1c150d';
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.55)';
+            ctx.beginPath(); ctx.ellipse(2, 5, 8, 5, 0, 0, Math.PI * 2); ctx.fill();
+
+            ctx.rotate(inf.angle);
+
+            const legSwing = Math.sin(inf.walkPhase) * 4;
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(-3 + legSwing, -5, 5, 3);
+            ctx.fillRect(-3 - legSwing, 2, 5, 3);
+
+            ctx.fillStyle = '#7f1d1d';
+            ctx.strokeStyle = '#fca5a5';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.roundRect(-5, -6, 10, 12, 3); ctx.fill(); ctx.stroke();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(3, 1.5, 13, 2.5);
+            ctx.fillStyle = '#facc15';
+            ctx.fillRect(14, 1.5, 2, 2.5);
+
+            ctx.fillStyle = '#991b1b';
+            ctx.beginPath(); ctx.arc(0, 0, 4.5, 0, Math.PI * 2); ctx.fill();
+
+            ctx.restore();
+
+            ctx.fillStyle = '#090d16';
+            ctx.fillRect(inf.x - 10, inf.y - 14, 20, 3);
+            ctx.fillStyle = '#f43f5e';
+            ctx.fillRect(inf.x - 10, inf.y - 14, 20 * Math.max(0, inf.hp / inf.maxHp), 3);
+        }
+
+        function drawWorld() {
+            const theme = getMapTheme(gameState.mapNumber);
+            ctx.save();
+            ctx.scale(scaleX * dpr, scaleY * dpr);
+
+            ctx.fillStyle = theme.ground;
             ctx.fillRect(0, 0, WORLD_W, WORLD_H);
 
-            ctx.strokeStyle = gameState.stage === 1 ? 'rgba(30, 41, 59, 0.45)' : 'rgba(120, 53, 15, 0.28)';
+            ctx.strokeStyle = 'rgba(148, 163, 184, 0.08)';
             ctx.lineWidth = 1;
-            for (let x = 0; x < WORLD_W; x += 50) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, WORLD_H); ctx.stroke(); }
-            for (let y = 0; y < WORLD_H; y += 50) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(WORLD_W, y); ctx.stroke(); }
+            for (let x = 0; x < WORLD_W; x += 60) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, WORLD_H); ctx.stroke(); }
+            for (let y = 0; y < WORLD_H; y += 60) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(WORLD_W, y); ctx.stroke(); }
 
             // Üs & Pist
-            ctx.fillStyle = '#121b2e';
+            ctx.fillStyle = '#0f172a';
             ctx.strokeStyle = '#334155';
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 2.5;
             ctx.beginPath();
-            ctx.roundRect(airbase.x, airbase.y, airbase.w, airbase.h, 14);
+            ctx.roundRect(airbase.x, airbase.y, airbase.w, airbase.h, 16);
             ctx.fill();
             ctx.stroke();
 
             const rw = airbase.runway;
-            ctx.fillStyle = '#090d16';
+            ctx.fillStyle = '#070b14';
             ctx.fillRect(rw.x, rw.y, rw.w, rw.h);
             ctx.strokeStyle = '#475569';
             ctx.strokeRect(rw.x, rw.y, rw.w, rw.h);
             ctx.strokeStyle = '#cbd5e1';
-            ctx.setLineDash([20, 16]);
+            ctx.setLineDash([22, 16]);
             ctx.beginPath();
             ctx.moveTo(rw.x + rw.w / 2, rw.y + 45);
             ctx.lineTo(rw.x + rw.w / 2, rw.y + rw.h - 45);
@@ -2485,27 +3073,43 @@
             ctx.setLineDash([]);
 
             // Karayolları
-            ctx.fillStyle = '#182234';
-            H_ROADS.forEach(y => ctx.fillRect(485, y - ROAD_W / 2, WORLD_W - 485, ROAD_W));
+            ctx.fillStyle = theme.road;
+            H_ROADS.forEach(y => ctx.fillRect(510, y - ROAD_W / 2, WORLD_W - 510, ROAD_W));
             V_ROADS.forEach(x => ctx.fillRect(x - ROAD_W / 2, 20, ROAD_W, WORLD_H - 40));
             ctx.strokeStyle = 'rgba(250, 204, 21, 0.35)';
             ctx.lineWidth = 2;
-            ctx.setLineDash([14, 14]);
-            H_ROADS.forEach(y => { ctx.beginPath(); ctx.moveTo(485, y); ctx.lineTo(WORLD_W, y); ctx.stroke(); });
+            ctx.setLineDash([16, 16]);
+            H_ROADS.forEach(y => { ctx.beginPath(); ctx.moveTo(510, y); ctx.lineTo(WORLD_W, y); ctx.stroke(); });
             V_ROADS.forEach(x => { ctx.beginPath(); ctx.moveTo(x, 20); ctx.lineTo(x, WORLD_H - 20); ctx.stroke(); });
             ctx.setLineDash([]);
 
-            // 3B Binalar
+            // Parklar, Bahçeler & Süs Havuzları
+            parks.forEach(pk => drawParkAndFountain(pk, theme));
+
+            // 3D Binalar
             buildings.forEach(b => {
-                ctx.fillStyle = 'rgba(2, 6, 23, 0.8)';
-                ctx.beginPath(); ctx.roundRect(b.x + 8, b.y + 8, b.w, b.h, 6); ctx.fill();
+                ctx.fillStyle = 'rgba(2, 6, 23, 0.85)';
+                ctx.beginPath(); ctx.roundRect(b.x + 10, b.y + 12, b.w, b.h, 8); ctx.fill();
+
                 ctx.fillStyle = b.damaged ? '#451a03' : b.wall;
-                ctx.beginPath(); ctx.roundRect(b.x, b.y, b.w, b.h, 6); ctx.fill();
+                ctx.beginPath(); ctx.roundRect(b.x, b.y, b.w, b.h, 8); ctx.fill();
+
                 ctx.fillStyle = b.damaged ? '#7c2d12' : b.roof;
-                ctx.beginPath(); ctx.roundRect(b.x + 5, b.y + 5, b.w - 10, b.h - 10, 4); ctx.fill();
+                ctx.beginPath(); ctx.roundRect(b.x + 6, b.y + 6, b.w - 12, b.h - 12, 6); ctx.fill();
+
+                if (!b.damaged) {
+                    ctx.fillStyle = b.win;
+                    ctx.globalAlpha = 0.28;
+                    for (let wx = b.x + 14; wx < b.x + b.w - 16; wx += 20) {
+                        for (let wy = b.y + 14; wy < b.y + b.h - 16; wy += 20) {
+                            ctx.fillRect(wx, wy, 8, 8);
+                        }
+                    }
+                    ctx.globalAlpha = 1.0;
+                }
             });
 
-            // Kale Karargahları (Tek Oyunculu veya 3 Kişilik Online Farklı Renklerde Kaleler)
+            // Kale Karargahları
             if (gameState.mode === 'SINGLE') {
                 draw3DCastleStructure(
                     airbase.hqBuilding.x, airbase.hqBuilding.y, airbase.hqBuilding.w, airbase.hqBuilding.h,
@@ -2527,7 +3131,7 @@
                         cSlot.x, cSlot.y, cSlot.w, cSlot.h,
                         PLAYER_COLORS[p.slot] || PLAYER_COLORS[1],
                         p.name || `Komutan #${p.slot + 1}`,
-                        p.hqHp !== undefined ? p.hqHp : 1500, 1500
+                        p.hqHp !== undefined ? p.hqHp : 1800, 1800
                     );
                 });
             }
@@ -2538,37 +3142,43 @@
                 ctx.beginPath(); ctx.arc(c.x, c.y, c.radius, 0, Math.PI * 2); ctx.fill();
             });
 
-            // Hava Savunma Kuleleri
-            aaTowers.forEach(tw => {
-                ctx.save();
-                ctx.translate(tw.x, tw.y);
-                ctx.fillStyle = '#3b0764';
-                ctx.strokeStyle = '#c084fc';
-                ctx.lineWidth = 2.5;
-                ctx.beginPath(); ctx.arc(0, 0, 18, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-                ctx.rotate(tw.angle);
-                ctx.fillStyle = '#e879f9';
-                ctx.fillRect(0, -3, 24, 6);
-                ctx.restore();
-            });
+            // Kendi Hava Savunma Kaleleri (Sv.3 Kilidi)
+            aaCastles.forEach(tw => drawAACastleSprite(tw.x, tw.y, tw.angle, '#c084fc'));
 
-            // Dost & Düşman Tanklar
+            // Yola Kurulan Kara Savunma Mevzileri (Sv.5 Kilidi)
+            groundBunkers.forEach(bnk => drawGroundBunkerSprite(bnk.x, bnk.y, bnk.angle, bnk.hp, bnk.maxHp, '#fb923c'));
+
+            // Dost & Düşman Tanklar, Yaya Askerler ve Düşman Savaş Uçakları
             drawFriendlyTank();
             drawEnemyTanks();
+            enemyInfantry.forEach(inf => drawEnemyInfantrySoldier(inf));
+            enemyJets.forEach(ej => {
+                drawAircraftSprite('JET', ej.x, ej.y, ej.angle, 1.0, '#f43f5e', '');
+                ctx.fillStyle = '#090d16';
+                ctx.fillRect(ej.x - 24, ej.y - 34, 48, 5);
+                ctx.fillStyle = '#f43f5e';
+                ctx.fillRect(ej.x - 24, ej.y - 34, 48 * Math.max(0, ej.hp / ej.maxHp), 5);
+            });
 
-            // Online Diğer Oyuncuların Tank ve Hava Araçları
+            // Online Diğer Oyuncuların Birimleri & Savunma Kuleleri
             if (gameState.mode === 'MULTI') {
                 Object.values(mpLobby.players).forEach(p => {
                     if (p.id === LOCAL_CLIENT_ID) return;
                     const col = PLAYER_COLORS[p.slot] || PLAYER_COLORS[1];
+                    if (Array.isArray(p.aaCastles)) {
+                        p.aaCastles.forEach(c => drawAACastleSprite(c.x, c.y, c.angle || 0, col.primary));
+                    }
+                    if (Array.isArray(p.groundBunkers)) {
+                        p.groundBunkers.forEach(b => drawGroundBunkerSprite(b.x, b.y, b.angle || 0, b.hp || 1100, 1100, col.primary));
+                    }
                     if (p.tank && p.tank.alive) {
                         ctx.save();
                         ctx.translate(p.tank.x, p.tank.y);
-                        drawDetailedTankModel(1.28, col.hull, col.dark, col.primary, p.tank.angle || 0, p.tank.turretAngle || 0, false);
+                        drawDetailedTankModel(1.32, col.hull, col.dark, col.primary, p.tank.angle || 0, p.tank.turretAngle || 0, false);
                         ctx.fillStyle = col.primary;
-                        ctx.font = 'bold 11px "JetBrains Mono", monospace';
+                        ctx.font = 'bold 12px "JetBrains Mono", monospace';
                         ctx.textAlign = 'center';
-                        ctx.fillText(p.name, 0, -34);
+                        ctx.fillText(p.name, 0, -36);
                         ctx.restore();
                     }
                     if (p.drone && p.drone.state !== 'IDLE') {
@@ -2616,6 +3226,47 @@
             ctx.restore();
         }
 
+        function drawAACastleSprite(x, y, angle, accentColor) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.75)';
+            ctx.beginPath(); ctx.arc(4, 5, 24, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = '#3b0764';
+            ctx.strokeStyle = accentColor;
+            ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.arc(0, 0, 22, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.rotate(angle);
+            ctx.fillStyle = '#e879f9';
+            ctx.fillRect(0, -4, 28, 3);
+            ctx.fillRect(0, 1, 28, 3);
+            ctx.restore();
+        }
+
+        function drawGroundBunkerSprite(x, y, angle, hp, maxHp, accentColor) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.8)';
+            ctx.beginPath(); ctx.roundRect(-24, -22, 52, 48, 10); ctx.fill();
+
+            ctx.fillStyle = '#431407';
+            ctx.strokeStyle = accentColor;
+            ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.roundRect(-26, -24, 52, 48, 10); ctx.fill(); ctx.stroke();
+
+            ctx.rotate(angle);
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(4, -4.5, 34, 9);
+            ctx.fillStyle = accentColor;
+            ctx.fillRect(34, -5.5, 6, 11);
+            ctx.beginPath(); ctx.arc(0, 0, 14, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+
+            ctx.fillStyle = '#090d16';
+            ctx.fillRect(x - 24, y - 34, 48, 5);
+            ctx.fillStyle = accentColor;
+            ctx.fillRect(x - 24, y - 34, 48 * Math.max(0, hp / maxHp), 5);
+        }
+
         function drawHangars() {
             [airbase.hangarDrone, airbase.hangarJet].forEach(h => {
                 ctx.fillStyle = '#1e293b';
@@ -2640,34 +3291,34 @@
             ctx.scale(scale, scale);
 
             ctx.save();
-            ctx.translate(5, 6);
+            ctx.translate(6, 7);
             ctx.rotate(bodyAngle);
-            ctx.fillStyle = 'rgba(2, 6, 23, 0.55)';
-            ctx.beginPath(); ctx.roundRect(-24, -16, 48, 32, 5); ctx.fill();
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.65)';
+            ctx.beginPath(); ctx.roundRect(-25, -17, 50, 34, 6); ctx.fill();
             ctx.restore();
 
             ctx.save();
             ctx.rotate(bodyAngle);
             ctx.fillStyle = '#0f172a';
-            ctx.fillRect(-24, -16, 48, 5.5);
-            ctx.fillRect(-24, 10.5, 48, 5.5);
+            ctx.fillRect(-25, -17, 50, 6);
+            ctx.fillRect(-25, 11, 50, 6);
             ctx.fillStyle = hullColor;
             ctx.strokeStyle = accentColor;
-            ctx.lineWidth = 1.4;
-            ctx.beginPath(); ctx.roundRect(-21, -11.5, 42, 23, 4); ctx.fill(); ctx.stroke();
+            ctx.lineWidth = 1.6;
+            ctx.beginPath(); ctx.roundRect(-22, -12, 44, 24, 5); ctx.fill(); ctx.stroke();
             ctx.restore();
 
             ctx.save();
             ctx.rotate(turretAngle);
             ctx.fillStyle = '#1e293b';
-            ctx.fillRect(6, -2.5, isBoss ? 34 : 28, 5);
+            ctx.fillRect(6, -2.8, isBoss ? 36 : 30, 5.6);
             ctx.fillStyle = accentColor;
-            ctx.fillRect(isBoss ? 36 : 31, -3.2, 4.5, 6.4);
+            ctx.fillRect(isBoss ? 38 : 33, -3.5, 5, 7);
             ctx.fillStyle = armorColor;
             ctx.strokeStyle = accentColor;
-            ctx.lineWidth = 1.5;
+            ctx.lineWidth = 1.6;
             ctx.beginPath();
-            ctx.moveTo(12, -7); ctx.lineTo(12, 7); ctx.lineTo(-11, 10); ctx.lineTo(-14, 0); ctx.lineTo(-11, -10);
+            ctx.moveTo(13, -8); ctx.lineTo(13, 8); ctx.lineTo(-12, 11); ctx.lineTo(-15, 0); ctx.lineTo(-12, -11);
             ctx.closePath();
             ctx.fill(); ctx.stroke();
             ctx.restore();
@@ -2683,15 +3334,15 @@
             ctx.save();
             ctx.translate(t.x, t.y);
             if (selectedUnitType === 'TANK') {
-                ctx.strokeStyle = 'rgba(16, 185, 129, 0.75)';
+                ctx.strokeStyle = 'rgba(16, 185, 129, 0.8)';
                 ctx.lineWidth = 2;
-                ctx.beginPath(); ctx.arc(0, 0, 36, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.arc(0, 0, 38, 0, Math.PI * 2); ctx.stroke();
             }
-            drawDetailedTankModel(1.28, col.hull, col.dark, col.primary, t.angle, t.turretAngle, false);
+            drawDetailedTankModel(1.32, col.hull, col.dark, col.primary, t.angle, t.turretAngle, false);
             ctx.fillStyle = '#090d16';
-            ctx.fillRect(-24, -30, 48, 5);
+            ctx.fillRect(-24, -32, 48, 5);
             ctx.fillStyle = '#10b981';
-            ctx.fillRect(-24, -30, 48 * (t.hp / t.maxHp), 5);
+            ctx.fillRect(-24, -32, 48 * (t.hp / t.maxHp), 5);
             ctx.restore();
         }
 
@@ -2699,14 +3350,14 @@
             enemyTanks.forEach(et => {
                 ctx.save();
                 ctx.translate(et.x, et.y);
-                const tankScale = et.isBoss ? 2.15 : (et.isHeavy ? 1.45 : 1.22);
+                const tankScale = et.isBoss ? 2.25 : (et.isHeavy ? 1.5 : 1.25);
                 if (et.isBoss) {
                     drawDetailedTankModel(tankScale, '#450a0a', '#991b1b', '#fbbf24', et.angle, et.turretAngle, true);
                 } else {
                     drawDetailedTankModel(tankScale, '#881337', '#be123c', '#fb7185', et.angle, et.turretAngle, false);
                 }
-                const barW = et.isBoss ? 72 : 44;
-                const barY = et.isBoss ? -48 : -28;
+                const barW = et.isBoss ? 78 : 46;
+                const barY = et.isBoss ? -52 : -30;
                 ctx.fillStyle = '#090d16';
                 ctx.fillRect(-barW / 2, barY, barW, 5);
                 ctx.fillStyle = et.isBoss ? '#f59e0b' : '#ef4444';
@@ -2716,13 +3367,13 @@
         }
 
         function drawAircraftSprite(type, x, y, angle, altitude, accentColor, label) {
-            const sc = (type === 'DRONE' ? 1.35 : 1.45) + altitude * 0.55;
+            const sc = (type === 'DRONE' ? 1.4 : 1.5) + altitude * 0.55;
             ctx.save();
-            ctx.translate(x + 22 * altitude, y + 26 * altitude);
+            ctx.translate(x + 24 * altitude, y + 28 * altitude);
             ctx.scale(sc * 0.9, sc * 0.9);
             ctx.rotate(angle);
-            ctx.fillStyle = 'rgba(2, 6, 23, 0.35)';
-            ctx.beginPath(); ctx.ellipse(0, 0, 20, 12, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.4)';
+            ctx.beginPath(); ctx.ellipse(0, 0, 22, 13, 0, 0, Math.PI * 2); ctx.fill();
             ctx.restore();
 
             ctx.save();
@@ -2733,27 +3384,29 @@
             if (type === 'DRONE') {
                 ctx.fillStyle = '#cbd5e1';
                 ctx.strokeStyle = accentColor;
-                ctx.lineWidth = 1.4;
+                ctx.lineWidth = 1.5;
                 ctx.beginPath();
-                ctx.moveTo(4, -26); ctx.lineTo(-3, -26); ctx.lineTo(-5, 26); ctx.lineTo(3, 26);
+                ctx.moveTo(4, -27); ctx.lineTo(-3, -27); ctx.lineTo(-5, 27); ctx.lineTo(3, 27);
                 ctx.closePath(); ctx.fill(); ctx.stroke();
                 ctx.fillStyle = '#f8fafc';
-                ctx.beginPath(); ctx.ellipse(2, 0, 17, 5, 0, 0, Math.PI * 2); ctx.fill();
+                ctx.beginPath(); ctx.ellipse(2, 0, 18, 5.5, 0, 0, Math.PI * 2); ctx.fill();
             } else {
                 ctx.fillStyle = '#334155';
                 ctx.strokeStyle = accentColor;
-                ctx.lineWidth = 1.4;
+                ctx.lineWidth = 1.6;
                 ctx.beginPath();
-                ctx.moveTo(26, 0); ctx.lineTo(-16, -24); ctx.lineTo(-12, 0); ctx.lineTo(-16, 24);
+                ctx.moveTo(28, 0); ctx.lineTo(-17, -26); ctx.lineTo(-13, 0); ctx.lineTo(-17, 26);
                 ctx.closePath(); ctx.fill(); ctx.stroke();
+                ctx.fillStyle = accentColor;
+                ctx.beginPath(); ctx.ellipse(8, 0, 7, 3, 0, 0, Math.PI * 2); ctx.fill();
             }
             ctx.restore();
 
             if (label) {
                 ctx.fillStyle = accentColor;
-                ctx.font = 'bold 11px "JetBrains Mono", monospace';
+                ctx.font = 'bold 12px "JetBrains Mono", monospace';
                 ctx.textAlign = 'center';
-                ctx.fillText(label, x, y - 28);
+                ctx.fillText(label, x, y - 30);
                 ctx.textAlign = 'left';
             }
         }
@@ -2762,12 +3415,16 @@
             ctx.fillStyle = '#34d399';
             friendlyShells.forEach(s => { ctx.beginPath(); ctx.arc(s.x, s.y, 4.5, 0, Math.PI * 2); ctx.fill(); });
             enemyShells.forEach(s => {
-                ctx.fillStyle = s.isBossShell ? '#fbbf24' : '#f43f5e';
-                ctx.beginPath(); ctx.arc(s.x, s.y, s.isBossShell ? 6 : 4.5, 0, Math.PI * 2); ctx.fill();
+                ctx.fillStyle = s.isBossShell ? '#fbbf24' : (s.isAirMissile ? '#38bdf8' : '#f43f5e');
+                ctx.beginPath(); ctx.arc(s.x, s.y, s.isBossShell ? 6.5 : 4.8, 0, Math.PI * 2); ctx.fill();
+            });
+            ctx.fillStyle = '#fde047';
+            rifleBullets.forEach(rb => {
+                ctx.beginPath(); ctx.arc(rb.x, rb.y, 2.3, 0, Math.PI * 2); ctx.fill();
             });
             antiAirShells.forEach(aa => {
                 ctx.fillStyle = '#c084fc';
-                ctx.beginPath(); ctx.arc(aa.x, aa.y, 4, 0, Math.PI * 2); ctx.fill();
+                ctx.beginPath(); ctx.arc(aa.x, aa.y, 4.2, 0, Math.PI * 2); ctx.fill();
             });
         }
 
@@ -2779,7 +3436,7 @@
             });
             ctx.globalAlpha = 1;
 
-            ctx.font = 'bold 12px "JetBrains Mono", monospace';
+            ctx.font = 'bold 13px "JetBrains Mono", monospace';
             floatingTexts.forEach(ft => {
                 ctx.globalAlpha = Math.max(0, ft.life);
                 ctx.fillStyle = ft.color;
@@ -2788,7 +3445,7 @@
             ctx.globalAlpha = 1;
         }
 
-        // ==================== UI GÜNCELLEME & YÜKSELTME BUTONLARI ====================
+        // ==================== UI GÜNCELLEME & YÜKSELTME BUTONLARI (MAX SV.10) ====================
         function updateUI() {
             document.getElementById('score-display').textContent = gameState.score;
             document.getElementById('kills-display').textContent = gameState.kills;
@@ -2825,70 +3482,87 @@
             document.getElementById('lvl-jet').textContent = `Sv.${upgrades.JET.level}`;
             document.getElementById('lvl-tank').textContent = `Sv.${upgrades.TANK.level}`;
 
-            document.getElementById('upg-drone-stats').textContent = `(Hasar: ${upgrades.DRONE.damage})`;
-            document.getElementById('upg-jet-stats').textContent = `(Hasar: ${upgrades.JET.damage})`;
-            document.getElementById('upg-tank-stats').textContent = `(Hasar: ${upgrades.TANK.damage})`;
+            document.getElementById('upg-drone-stats').textContent = `Sv.${upgrades.DRONE.level} • Hasar: ${upgrades.DRONE.damage}`;
+            document.getElementById('upg-jet-stats').textContent = `Sv.${upgrades.JET.level} • Hasar: ${upgrades.JET.damage}`;
+            document.getElementById('upg-tank-stats').textContent = `Sv.${upgrades.TANK.level} • Hasar: ${upgrades.TANK.damage}`;
 
             const btnD = document.getElementById('btn-upg-drone');
-            btnD.textContent = upgrades.DRONE.level >= 5 ? 'MAX' : `★ ${upgrades.DRONE.cost}`;
-            btnD.disabled = upgrades.DRONE.level >= 5 || gameState.score < upgrades.DRONE.cost;
+            btnD.textContent = upgrades.DRONE.level >= 10 ? 'MAX Sv.10' : `▲ ★ ${upgrades.DRONE.cost}`;
+            btnD.disabled = upgrades.DRONE.level >= 10 || gameState.score < upgrades.DRONE.cost;
 
             const btnJ = document.getElementById('btn-upg-jet');
-            btnJ.textContent = upgrades.JET.level >= 5 ? 'MAX' : `★ ${upgrades.JET.cost}`;
-            btnJ.disabled = upgrades.JET.level >= 5 || gameState.score < upgrades.JET.cost;
+            btnJ.textContent = upgrades.JET.level >= 10 ? 'MAX Sv.10' : `▲ ★ ${upgrades.JET.cost}`;
+            btnJ.disabled = upgrades.JET.level >= 10 || gameState.score < upgrades.JET.cost;
 
             const btnT = document.getElementById('btn-upg-tank');
-            btnT.textContent = upgrades.TANK.level >= 5 ? 'MAX' : `★ ${upgrades.TANK.cost}`;
-            btnT.disabled = upgrades.TANK.level >= 5 || gameState.score < upgrades.TANK.cost;
+            btnT.textContent = upgrades.TANK.level >= 10 ? 'MAX Sv.10' : `▲ ★ ${upgrades.TANK.cost}`;
+            btnT.disabled = upgrades.TANK.level >= 10 || gameState.score < upgrades.TANK.cost;
 
             const btnRep = document.getElementById('btn-repair-hq');
             btnRep.disabled = gameState.score < 100 || gameState.hqHp >= gameState.hqMaxHp;
 
-            const aaUnlocked = upgrades.DRONE.level >= 5 && upgrades.JET.level >= 5 && upgrades.TANK.level >= 5;
+            // Sv.3 Hava Savunma Kalesi & Sv.5 Yola Kurulan Kara Mevzisi Kilit Kontrolleri
+            const allLv3 = upgrades.DRONE.level >= 3 && upgrades.JET.level >= 3 && upgrades.TANK.level >= 3;
+            const allLv5 = upgrades.DRONE.level >= 5 && upgrades.JET.level >= 5 && upgrades.TANK.level >= 5;
+
             const btnAA = document.getElementById('select-aa-tower');
             const aaBadge = document.getElementById('aa-unlock-badge');
-            btnAA.disabled = !aaUnlocked || gameState.score < 300;
-            if (aaUnlocked) {
+            btnAA.disabled = !allLv3 || gameState.score < 300;
+            if (allLv3) {
                 aaBadge.textContent = 'AÇIK!';
                 aaBadge.className = 'text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300';
+            } else {
+                aaBadge.textContent = 'TÜMÜ Sv.3';
+                aaBadge.className = 'text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-slate-800 text-slate-400';
+            }
+
+            const btnBnk = document.getElementById('select-ground-bunker');
+            const bnkBadge = document.getElementById('bunker-unlock-badge');
+            btnBnk.disabled = !allLv5 || gameState.score < 400;
+            if (allLv5) {
+                bnkBadge.textContent = 'AÇIK!';
+                bnkBadge.className = 'text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300';
+            } else {
+                bnkBadge.textContent = 'TÜMÜ Sv.5';
+                bnkBadge.className = 'text-[9px] font-mono-tech px-1.5 py-0.5 rounded bg-slate-800 text-slate-400';
             }
         }
 
         document.getElementById('btn-upg-drone').addEventListener('click', () => {
             const u = upgrades.DRONE;
-            if (u.level >= 5 || gameState.score < u.cost) return;
+            if (u.level >= 10 || gameState.score < u.cost) return;
             gameState.score -= u.cost;
             u.level++;
             u.damage += 45;
-            u.speedMult += 0.2;
-            u.cost = Math.round(u.cost * 1.45);
+            u.speedMult += 0.14;
+            u.cost = Math.round(u.cost * 1.32);
             SoundFX.playUpgrade();
             updateUI();
         });
 
         document.getElementById('btn-upg-jet').addEventListener('click', () => {
             const u = upgrades.JET;
-            if (u.level >= 5 || gameState.score < u.cost) return;
+            if (u.level >= 10 || gameState.score < u.cost) return;
             gameState.score -= u.cost;
             u.level++;
-            u.damage += 80;
-            u.blastRadius += 20;
-            u.cost = Math.round(u.cost * 1.45);
+            u.damage += 75;
+            u.blastRadius += 14;
+            u.cost = Math.round(u.cost * 1.32);
             SoundFX.playUpgrade();
             updateUI();
         });
 
         document.getElementById('btn-upg-tank').addEventListener('click', () => {
             const u = upgrades.TANK;
-            if (u.level >= 5 || gameState.score < u.cost) return;
+            if (u.level >= 10 || gameState.score < u.cost) return;
             gameState.score -= u.cost;
             u.level++;
-            u.damage += 35;
-            u.maxHp += 120;
-            u.speedMult += 0.15;
+            u.damage += 38;
+            u.maxHp += 130;
+            u.speedMult += 0.1;
             units.TANK.maxHp = u.maxHp;
             units.TANK.hp = u.maxHp;
-            u.cost = Math.round(u.cost * 1.45);
+            u.cost = Math.round(u.cost * 1.32);
             SoundFX.playUpgrade();
             updateUI();
         });
@@ -2896,7 +3570,7 @@
         document.getElementById('btn-repair-hq').addEventListener('click', () => {
             if (gameState.score < 100 || gameState.hqHp >= gameState.hqMaxHp) return;
             gameState.score -= 100;
-            gameState.hqHp = Math.min(gameState.hqMaxHp, gameState.hqHp + 350);
+            gameState.hqHp = Math.min(gameState.hqMaxHp, gameState.hqHp + 400);
             SoundFX.playUpgrade();
             updateUI();
         });
@@ -2904,6 +3578,17 @@
         function selectUnit(type) {
             SoundFX.playClick();
             selectedUnitType = type;
+            const buildBanner = document.getElementById('build-mode-banner');
+            if (type === 'AA_TOWER') {
+                buildBanner.textContent = '🏰 HAVA SAVUNMA KALESİ: HARİTADA İSTEDİĞİNİZ NOKTAYA TIKLAYIN!';
+                buildBanner.classList.remove('hidden');
+            } else if (type === 'GROUND_BUNKER') {
+                buildBanner.textContent = '🛡️ KARA SAVUNMA MEVZİSİ: KURMAK İÇİN KARAYOLUNA TIKLAYIN!';
+                buildBanner.classList.remove('hidden');
+            } else {
+                buildBanner.classList.add('hidden');
+            }
+
             const map = {
                 DRONE: { id: 'select-drone', border: 'border-sky-500 bg-sky-500/15' },
                 JET:   { id: 'select-jet',   border: 'border-amber-500 bg-amber-500/15' },
@@ -2917,18 +3602,32 @@
                     el.className = 'p-1.5 sm:p-2 rounded-xl border border-slate-700 bg-slate-800/60 hover:bg-slate-800 text-left transition flex flex-col justify-between';
                 }
             });
+
+            const btnAA = document.getElementById('select-aa-tower');
+            const btnBnk = document.getElementById('select-ground-bunker');
+            btnAA.className = type === 'AA_TOWER'
+                ? 'unit-btn-active p-2 rounded-xl border-2 border-purple-500 bg-purple-500/20 text-left transition flex flex-col justify-between'
+                : 'p-2 rounded-xl border border-slate-700 bg-slate-950/90 disabled:opacity-55 text-left transition flex flex-col justify-between';
+            btnBnk.className = type === 'GROUND_BUNKER'
+                ? 'unit-btn-active p-2 rounded-xl border-2 border-orange-500 bg-orange-500/20 text-left transition flex flex-col justify-between'
+                : 'p-2 rounded-xl border border-slate-700 bg-slate-950/90 disabled:opacity-55 text-left transition flex flex-col justify-between';
         }
 
         document.getElementById('select-drone').addEventListener('click', () => selectUnit('DRONE'));
         document.getElementById('select-jet').addEventListener('click', () => selectUnit('JET'));
         document.getElementById('select-tank').addEventListener('click', () => selectUnit('TANK'));
         document.getElementById('select-aa-tower').addEventListener('click', () => selectUnit('AA_TOWER'));
+        document.getElementById('select-ground-bunker').addEventListener('click', () => selectUnit('GROUND_BUNKER'));
 
         document.getElementById('btn-auto-engage').addEventListener('click', () => {
             if (enemyTanks.length > 0) {
                 let closest = enemyTanks[0];
                 enemyTanks.forEach(et => { if (et.x < closest.x) closest = et; });
                 commandAttack(closest.x, closest.y);
+            } else if (enemyInfantry.length > 0) {
+                commandAttack(enemyInfantry[0].x, enemyInfantry[0].y);
+            } else if (enemyJets.length > 0) {
+                commandAttack(enemyJets[0].x, enemyJets[0].y);
             } else if (gameState.mode === 'MULTI') {
                 for (const p of Object.values(mpLobby.players)) {
                     if (p.id !== LOCAL_CLIENT_ID && p.tank && p.tank.alive) {
@@ -2941,10 +3640,13 @@
 
         function resizeCanvas() {
             const rect = container.getBoundingClientRect();
-            canvas.width = rect.width || 1100;
-            canvas.height = rect.height || 720;
-            scaleX = canvas.width / WORLD_W;
-            scaleY = canvas.height / WORLD_H;
+            dpr = Math.min(2.5, window.devicePixelRatio || 1.5);
+            const w = rect.width || 1100;
+            const h = rect.height || 720;
+            canvas.width = Math.round(w * dpr);
+            canvas.height = Math.round(h * dpr);
+            scaleX = w / WORLD_W;
+            scaleY = h / WORLD_H;
         }
 
         canvas.addEventListener('mousemove', (e) => {
@@ -2981,7 +3683,7 @@
             loadSavedNickname();
             checkMobileOrientation();
             resizeCanvas();
-            initCityEnvironment();
+            initCityEnvironment(1);
             updateUI();
             refreshOpenRoomsDirectory();
             mpLobby.directoryInterval = setInterval(refreshOpenRoomsDirectory, 2500);
