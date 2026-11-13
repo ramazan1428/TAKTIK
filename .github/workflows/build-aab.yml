@@ -1,0 +1,61 @@
+name: Build Signed Play Store AAB
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Initialize Capacitor & Android Project
+        run: |
+          mkdir -p www
+          cp index.html www/index.html
+          npm init -y
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
+          npx cap init "Sehir Savunmasi" "com.komutan.sehirsavunmasi" --web-dir www
+          npx cap add android
+
+      - name: Lock Landscape Orientation & Internet Permission
+        run: |
+          MANIFEST="android/app/src/main/AndroidManifest.xml"
+          sed -i 's/android:name=".MainActivity"/android:name=".MainActivity" android:screenOrientation="sensorLandscape"/' $MANIFEST
+          grep -q "android.permission.INTERNET" $MANIFEST || sed -i 's/<application/<uses-permission android:name="android.permission.INTERNET" \/>\n    <application/' $MANIFEST
+
+      - name: Generate Release Keystore
+        run: |
+          keytool -genkey -v -keystore release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias komutan_key -storepass Komutan2026! -keypass Komutan2026! -dname "CN=Komutan, OU=Game, O=SehirSavunmasi, L=Istanbul, S=Istanbul, C=TR"
+
+      - name: Build Signed AAB
+        run: |
+          cd android
+          ./gradlew bundleRelease \
+            -Pandroid.injected.signing.store.file=$(pwd)/../release-key.jks \
+            -Pandroid.injected.signing.store.password=Komutan2026! \
+            -Pandroid.injected.signing.key.alias=komutan_key \
+            -Pandroid.injected.signing.key.password=Komutan2026!
+
+      - name: Upload AAB and Keystore Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: PlayStore-Paket-ve-Anahtar
+          path: |
+            android/app/build/outputs/bundle/release/app-release.aab
+            release-key.jks
+            
